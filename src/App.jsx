@@ -24,7 +24,7 @@ function App() {
   const keys = useRef({ left: false, right: false });
   const playerXRef = useRef(ARENA_WIDTH / 2);
   const bestRef = useRef(Number(localStorage.getItem("arcade-best") || 0));
-  const [running, setRunning] = useState(false);
+  const [running, setRunning] = useState(true);
   const [items, setItems] = useState([]);
   const [playerX, setPlayerX] = useState(ARENA_WIDTH / 2);
   const [score, setScore] = useState(0);
@@ -182,15 +182,15 @@ function App() {
           <div className="player" style={{ left: `${(playerX / ARENA_WIDTH) * 100}%` }} />
           <div className="hint">Move with mouse, touch, arrow keys, or A/D</div>
 
-          {(!running || gameOver) && (
+          {gameOver && (
             <div className="overlay">
               <div className="panel">
-                <h2>{gameOver ? "Game Over" : "Ready?"}</h2>
+                <h2>Game Over</h2>
                 <p>
                   Collect the yellow coins for points. Avoid red danger drops and do not let coins fall past you.
                 </p>
-                <button className="primary" onClick={startGame}>
-                  {gameOver ? "Play Again" : "Start Game"}
+                <button className="primary" onClick={startGame} onPointerDown={startGame}>
+                  Play Again
                 </button>
               </div>
             </div>
