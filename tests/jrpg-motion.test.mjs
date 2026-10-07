@@ -1,0 +1,13 @@
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+import ts from 'typescript';
+const js=ts.transpileModule(readFileSync('app/tekad-jrpg/motion.ts','utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext}}).outputText;
+const {partyTime,enemyTime,recoveryTime,PARTY_IMPACT_MS,PARTY_RECOVERY_MS}=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
+assert.equal(partyTime(PARTY_IMPACT_MS),360);
+assert.equal(partyTime(PARTY_IMPACT_MS+120),360);
+assert.equal(partyTime(PARTY_IMPACT_MS+PARTY_RECOVERY_MS),900);
+assert.equal(enemyTime(1620),1260);
+assert.equal(recoveryTime(120),0);
+assert.equal(recoveryTime(700),540);
+for(const clock of [partyTime,enemyTime])for(let t=1;t<2500;t++)assert.ok(clock(t)>=clock(t-1));
+console.log('Slow-motion clocks align damage, held impact and return to formation.');

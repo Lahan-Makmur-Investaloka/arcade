@@ -1,0 +1,210 @@
+{
+  "method": "built-in ImageGen",
+  "aces": {
+    "prompts": {
+      "mode": "built-in image_gen",
+      "assets": [
+        {
+          "name": "spade",
+          "prompt": "Use case: logo-brand\nAsset type: Premium original Ace emblem for the TEKAD Big Two playing card deck, raster PNG.\nPrimary request: Exactly ONE classic SPADE playing-card suit emblem. A broad pointed leaf rising to one sharp top apex, two rounded lower shoulders, and one short broad stem centered below.\nScene/backdrop: genuinely transparent background, empty outside the single silhouette.\nStyle/medium: bold geometric flat screenprint, black enamel-like solid ink fill, restrained antique gold botanical engraving INSIDE silhouette only. A few warm ivory fine-line engraved details. Mostly solid color, excellent readability at 45 to 70px. Elegant original royal deck ornament.\nComposition/framing: centered symmetrical emblem on square canvas occupying 85 percent of available width/height with at least 7 percent safe transparent margin. Clean continuous unmistakable suit outer contour.\nConstraints: one single suit only. No external flourishes. No cards, frames, letters, words, numbers, text, crowns, other suit symbols, jewels, photorealism, drop shadow, gradients or scene. Minimal broad internal engraved botanical stems and leaves; generous uninterrupted solid fill. All decoration stays well inside the silhouette.",
+          "source": "/workspace/scratch/1a9c166ebcfa/generated_images/exec-855dfde1-6571-4b41-a13a-6b3712d4f990.png"
+        },
+        {
+          "name": "heart",
+          "prompt": "Use case: logo-brand\nAsset type: Premium original Ace emblem for the TEKAD Big Two playing card deck, raster PNG.\nPrimary request: Exactly ONE classic HEART playing-card suit emblem. Two full rounded upper lobes separated by a central notch, tapering to one centered sharp bottom point; no stem.\nScene/backdrop: genuinely transparent background, empty outside the single silhouette.\nStyle/medium: bold geometric flat screenprint, deep crimson enamel-like solid ink fill, restrained antique gold botanical engraving INSIDE silhouette only. A few warm ivory fine-line engraved details. Mostly solid color, excellent readability at 45 to 70px. Elegant original royal deck ornament.\nComposition/framing: centered symmetrical emblem on square canvas occupying 85 percent of available width/height with at least 7 percent safe transparent margin. Clean continuous unmistakable suit outer contour.\nConstraints: one single suit only. No external flourishes. No cards, frames, letters, words, numbers, text, crowns, other suit symbols, jewels, photorealism, drop shadow, gradients or scene. Minimal broad internal engraved botanical stems and leaves; generous uninterrupted solid fill. All decoration stays well inside the silhouette.",
+          "source": "/workspace/scratch/1a9c166ebcfa/generated_images/exec-d80cb0da-7404-4e02-a225-048baa344906.png"
+        },
+        {
+          "name": "club",
+          "prompt": "Use case: logo-brand\nAsset type: Premium original Ace emblem for the TEKAD Big Two playing card deck, raster PNG.\nPrimary request: Exactly ONE classic CLUB playing-card suit emblem. Exactly three large round lobes: one centered top circle and two lower side circles; joined center and one short broad stem below, the classic clubs suit silhouette.\nScene/backdrop: genuinely transparent background, empty outside the single silhouette.\nStyle/medium: bold geometric flat screenprint, black enamel-like solid ink fill, restrained antique gold botanical engraving INSIDE silhouette only. A few warm ivory fine-line engraved details. Mostly solid color, excellent readability at 45 to 70px. Elegant original royal deck ornament.\nComposition/framing: centered symmetrical emblem on square canvas occupying 85 percent of available width/height with at least 7 percent safe transparent margin. Clean continuous unmistakable suit outer contour.\nConstraints: one single suit only. No external flourishes. No cards, frames, letters, words, numbers, text, crowns, other suit symbols, jewels, photorealism, drop shadow, gradients or scene. Minimal broad internal engraved botanical stems and leaves; generous uninterrupted solid fill. All decoration stays well inside the silhouette.",
+          "source": "/workspace/scratch/1a9c166ebcfa/generated_images/exec-631b72dc-ed4a-4026-9d30-02b751af3195.png"
+        },
+        {
+          "name": "diamond",
+          "prompt": "Use case: logo-brand\nAsset type: Premium original Ace emblem for the TEKAD Big Two playing card deck, raster PNG.\nPrimary request: Exactly ONE classic DIAMOND playing-card suit emblem. A four-sided rhombus with exactly four straight outer sides and four sharp vertices, vertically elongated but broad enough for a bold classic diamonds suit silhouette.\nScene/backdrop: genuinely transparent background, empty outside the single silhouette.\nStyle/medium: bold geometric flat screenprint, deep crimson enamel-like solid ink fill, restrained antique gold botanical engraving INSIDE silhouette only. A few warm ivory fine-line engraved details. Mostly solid color, excellent readability at 45 to 70px. Elegant original royal deck ornament.\nComposition/framing: centered symmetrical emblem on square canvas occupying 85 percent of available width/height with at least 7 percent safe transparent margin. Clean continuous unmistakable suit outer contour.\nConstraints: one single suit only. No external flourishes. No cards, frames, letters, words, numbers, text, crowns, other suit symbols, jewels, photorealism, drop shadow, gradients or scene. Minimal broad internal engraved botanical stems and leaves; generous uninterrupted solid fill. All decoration stays well inside the silhouette.",
+          "source": "/workspace/scratch/1a9c166ebcfa/generated_images/exec-d0d68761-103f-4b2a-adf6-53d8d1609cae.png",
+          "refinementPrompt": "Edit target: the diamond Ace emblem. Correct only its OUTER silhouette into a geometrically straight-sided rhombus: exactly four perfectly STRAIGHT sides joining four sharp points, top (50%,7%), right (85%,50%), bottom (50%,93%), left (15%,50%). NO curved or concave sides. Keep deep crimson solid fill, antique gold and ivory botanical ornament inside this outline, same original premium flat screenprint style. Preserve transparent background. No text, card, frames, extra symbols or external flourishes. Square canvas. This must read immediately as the standard DIAMOND playing-card suit. All side edges must be perfectly straight, like a rotated square stretched vertically.",
+          "finalSource": "/workspace/scratch/1a9c166ebcfa/generated_images/exec-f860597d-e88e-4d60-b51a-f29921300309.png"
+        }
+      ]
+    },
+    "exports": [
+      {
+        "path": "public/big-two/art/ace-spade.webp",
+        "size": [
+          512,
+          512
+        ],
+        "bytes": 59220,
+        "sha256": "9e42e0637da95d957f1ff14b5ad62b71d63d6d369edaf75684794798f52f9924",
+        "source_sha256": "e302f1dec1fa3541925db82a2d9a15685e092f15879d913bffabc80424d4924c"
+      },
+      {
+        "path": "public/big-two/art/ace-heart.webp",
+        "size": [
+          512,
+          512
+        ],
+        "bytes": 57774,
+        "sha256": "38faffaaf30dccd39100b25ffd73da8ca451026fa4f40f641d4fa1305a55f15c",
+        "source_sha256": "5e9f43e45f872a37676671f0c28b2bcb60e544287380e9aec49e1dfba42480d1"
+      },
+      {
+        "path": "public/big-two/art/ace-club.webp",
+        "size": [
+          512,
+          512
+        ],
+        "bytes": 72868,
+        "sha256": "16f352a9a1f87cde6f845e76f39db4b542affa43cbe1218c9f7405859e9f0eb8",
+        "source_sha256": "45f8a5b102a5e23b4191e941b3cdfe42d0db97028f5aecfb4699a5c0444c5b70"
+      },
+      {
+        "path": "public/big-two/art/ace-diamond.webp",
+        "size": [
+          512,
+          512
+        ],
+        "bytes": 38418,
+        "sha256": "6dbafc31166079baf1ee6b4efffdc38bbc212fd09c1854e99565da68a60214bc",
+        "source_sha256": "f45711fc0134aa4ac8470affb0b238be01c8b744c0addd57adc949052c9b29e9"
+      }
+    ]
+  },
+  "cutins": {
+    "prompts": {
+      "tool": "built-in image_gen.imagegen",
+      "transparent_background_requested": true,
+      "limitations": "Full heads are in frame, margins closer to 3\u20135% than requested 8%. All five outputs have true RGBA alpha: corners and top-background samples alpha0. Image viewer showed RGB under alpha; colored glows in underlying RGB should not be mistaken for opaque background.",
+      "initial_prompts": {
+        "timmy": "Use case: stylized-concept. Asset type: TEKAD Big Two special move horizontal banner cut-in. Input image is character identity/outfit reference only; create a new close-up portrait. Subject: Timmy: handsome young adult man, black swept tousled hair, rectangular black glasses, warm brown eyes, black blazer with electric cobalt blue lapel edging, open-collar white shirt and black vest. Preserve unmistakable identity and outfit from reference. Original character only. Output landscape 3:2, preferably 1536x1024, genuine transparent background. ONLY HEAD AND SHOULDERS/UPPER CHEST, not waist or full figure. Face central and large, approximately 45% of image height; shoulders/chest lower 40%. Entire head including every hair spike, ponytail upper silhouette or hijab must fit with at least 8% clear margin above and at sides. Shoulders form broad lower silhouette. Dynamic three-quarter slight turn, looking towards viewer/right; confident fierce expression with subtle smile. Bold high-quality anime cel ink, crisp clean silhouette, rich high contrast shading. Consistent generous close-up framing for five character banner set. No hands, arms posing, cards, text, symbols, graphic shapes, effects, background, border or watermark. Keep all hair/head inside canvas; upper chest crops at bottom edge. Do not shrink a whole-body drawing into frame.",
+        "eldric": "Use case: stylized-concept. Asset type: TEKAD Big Two special move horizontal banner cut-in. Input image is character identity/outfit reference only; create a new close-up portrait. Subject: Eldric: handsome young adult man, tousled medium brown hair with brass goggles resting on head, amber eyes, black adventure coat with yellow hood/lapels, white open-collar shirt, subtle brass details. Preserve unmistakable identity and outfit from reference. Original character only. Output landscape 3:2, preferably 1536x1024, genuine transparent background. ONLY HEAD AND SHOULDERS/UPPER CHEST, not waist or full figure. Face central and large, approximately 45% of image height; shoulders/chest lower 40%. Entire head including every hair spike, ponytail upper silhouette or hijab must fit with at least 8% clear margin above and at sides. Shoulders form broad lower silhouette. Dynamic three-quarter slight turn, looking towards viewer/right; confident fierce expression with subtle smile. Bold high-quality anime cel ink, crisp clean silhouette, rich high contrast shading. Consistent generous close-up framing for five character banner set. No hands, arms posing, cards, text, symbols, graphic shapes, effects, background, border or watermark. Keep all hair/head inside canvas; upper chest crops at bottom edge. Do not shrink a whole-body drawing into frame.",
+        "kirana": "Use case: stylized-concept. Asset type: TEKAD Big Two special move horizontal banner cut-in. Input image is character identity/outfit reference only; create a new close-up portrait. Subject: Kirana: young adult woman, long black twin ponytails with yellow flower ties, warm amber eyes, black ornate coat with green lapels and gold trim, white ruffled high-neck blouse and green neck bow with yellow flower brooch. Preserve unmistakable identity and outfit from reference. Original character only. Output landscape 3:2, preferably 1536x1024, genuine transparent background. ONLY HEAD AND SHOULDERS/UPPER CHEST, not waist or full figure. Face central and large, approximately 45% of image height; shoulders/chest lower 40%. Entire head including every hair spike, ponytail upper silhouette or hijab must fit with at least 8% clear margin above and at sides. Shoulders form broad lower silhouette. Dynamic three-quarter slight turn, looking towards viewer/right; confident fierce expression with subtle smile. Bold high-quality anime cel ink, crisp clean silhouette, rich high contrast shading. Consistent generous close-up framing for five character banner set. No hands, arms posing, cards, text, symbols, graphic shapes, effects, background, border or watermark. Keep all hair/head inside canvas; upper chest crops at bottom edge. Do not shrink a whole-body drawing into frame.",
+        "adelia": "Use case: stylized-concept. Asset type: TEKAD Big Two special move horizontal banner cut-in. Input image is character identity/outfit reference only; create a new close-up portrait. Subject: Adelia: young adult woman, lavender hijab fully covering hair and neck, warm brown eyes, modest black coat with purple trim over high-neck ivory blouse, silver-purple brooch. Preserve unmistakable identity and outfit from reference. Original character only. Output landscape 3:2, preferably 1536x1024, genuine transparent background. ONLY HEAD AND SHOULDERS/UPPER CHEST, not waist or full figure. Face central and large, approximately 45% of image height; shoulders/chest lower 40%. Entire head including every hair spike, ponytail upper silhouette or hijab must fit with at least 8% clear margin above and at sides. Shoulders form broad lower silhouette. Dynamic three-quarter slight turn, looking towards viewer/right; confident fierce expression with subtle smile. Bold high-quality anime cel ink, crisp clean silhouette, rich high contrast shading. Consistent generous close-up framing for five character banner set. No hands, arms posing, cards, text, symbols, graphic shapes, effects, background, border or watermark. Keep all hair/head inside canvas; upper chest crops at bottom edge. Do not shrink a whole-body drawing into frame.",
+        "dylan": "Use case: stylized-concept. Asset type: TEKAD Big Two special move horizontal banner cut-in. Input image is character identity/outfit reference only; create a new close-up portrait. Subject: Dylan: muscular young adult man, vivid tall spiky red hair, red-brown eyes and strong jaw, black-and-red leather biker jacket over black crew-neck shirt. Preserve unmistakable identity and outfit from reference. Original character only. Output landscape 3:2, preferably 1536x1024, genuine transparent background. ONLY HEAD AND SHOULDERS/UPPER CHEST, not waist or full figure. Face central and large, approximately 45% of image height; shoulders/chest lower 40%. Entire head including every hair spike, ponytail upper silhouette or hijab must fit with at least 8% clear margin above and at sides. Shoulders form broad lower silhouette. Dynamic three-quarter slight turn, looking towards viewer/right; confident fierce expression with subtle smile. Bold high-quality anime cel ink, crisp clean silhouette, rich high contrast shading. Consistent generous close-up framing for five character banner set. No hands, arms posing, cards, text, symbols, graphic shapes, effects, background, border or watermark. Keep all hair/head inside canvas; upper chest crops at bottom edge. Do not shrink a whole-body drawing into frame."
+      },
+      "correction_prompt": "Edit this character cut-in: preserve identity, expression, drawing style, colors and clothing. Remove ALL background including black field, colored glow and shadow; output real transparent alpha background with a clean cutout edge. Reframe by zooming OUT 20% so the COMPLETE top and sides of the hair or hijab are visible, with at least 100 pixels of empty transparent space above the highest hair/hijab point and 120 pixels at left and right. Reconstruct clipped hair/hijab so the top silhouette is complete. Keep same 1536x1024 landscape canvas. Head and shoulders only, chest cropped at bottom; no hands, no extra objects. This is a isolated transparent character portrait sprite, not a finished banner. Absolutely no background, gradient or glow.",
+      "initial_paths": {
+        "timmy": "exec-438da875-0fe1-4844-ae6c-2f4b54360ab5.png",
+        "eldric": "exec-1399f737-e648-49c5-aa8b-2333d04ae046.png",
+        "kirana": "exec-f3dde07a-4175-4990-98c6-b1d88274ec98.png",
+        "adelia": "exec-0ea90500-88b7-4685-9010-5585d6aea255.png",
+        "dylan": "exec-50d8663f-f525-4943-9ba3-034129fc8fbf.png"
+      },
+      "final_paths": {
+        "timmy": "/workspace/scratch/1a9c166ebcfa/generated_images/exec-6881f74a-136e-4fc3-8def-c613fc283042.png",
+        "eldric": "/workspace/scratch/1a9c166ebcfa/generated_images/exec-ce8a2431-3522-4c2c-acd2-1fb4e7a744a7.png",
+        "kirana": "/workspace/scratch/1a9c166ebcfa/generated_images/exec-d650358a-3357-4a50-8fa3-c32a5c176bfd.png",
+        "adelia": "/workspace/scratch/1a9c166ebcfa/generated_images/exec-e980340a-ee13-49c9-94a6-b5305fd55659.png",
+        "dylan": "/workspace/scratch/1a9c166ebcfa/generated_images/exec-399a8005-c04b-42a3-bcca-c7349b385607.png"
+      },
+      "verified_dimensions": [
+        1536,
+        1024
+      ],
+      "verified_mode": "RGBA"
+    },
+    "exports": [
+      {
+        "path": "public/big-two/art/timmy-cutin.webp",
+        "size": [
+          960,
+          640
+        ],
+        "bytes": 95266,
+        "sha256": "8d6c551fb117bf3c9abc503b2af8aaf22ceda050c9bb7b784cbc6d27918e94ca",
+        "source_sha256": "ed4d9f90321a6227fa32aae254b1744b665fd105a086d31bbb51707af00200ec"
+      },
+      {
+        "path": "public/big-two/art/timmy-cutin-480.webp",
+        "size": [
+          480,
+          320
+        ],
+        "bytes": 33564,
+        "sha256": "2d4f9012021851cac937258e2badfa2ac68a7efafefed822d3159f877d42fe29",
+        "source_sha256": "ed4d9f90321a6227fa32aae254b1744b665fd105a086d31bbb51707af00200ec"
+      },
+      {
+        "path": "public/big-two/art/eldric-cutin.webp",
+        "size": [
+          960,
+          640
+        ],
+        "bytes": 127404,
+        "sha256": "de94ec27c5c4c4cfa617a8110da7bca1ddb1fd742aaacf25ba4786e660a7e6b5",
+        "source_sha256": "48d0cb84c1052a2323a8edddeadaeda08bcb0515af2d3448201e0b5a211b1d89"
+      },
+      {
+        "path": "public/big-two/art/eldric-cutin-480.webp",
+        "size": [
+          480,
+          320
+        ],
+        "bytes": 44040,
+        "sha256": "534ca3c399e005ae3ef2bd2483cbeb52ebbb5f47dcba7690bae2cf05bf6d653c",
+        "source_sha256": "48d0cb84c1052a2323a8edddeadaeda08bcb0515af2d3448201e0b5a211b1d89"
+      },
+      {
+        "path": "public/big-two/art/kirana-cutin.webp",
+        "size": [
+          960,
+          640
+        ],
+        "bytes": 209786,
+        "sha256": "54363b16ba435e0e5e01e5bb626c830d701069b42fa5a99805dd5e0c62b11017",
+        "source_sha256": "01848af1df9ff1ceab6ebfc5f39502578bbf926d5980629fc4722b8d71bd05f9"
+      },
+      {
+        "path": "public/big-two/art/kirana-cutin-480.webp",
+        "size": [
+          480,
+          320
+        ],
+        "bytes": 70862,
+        "sha256": "298e2395a3f3657e17abe64ca8bd4661a9c19e320c336b945cb3b7b652935050",
+        "source_sha256": "01848af1df9ff1ceab6ebfc5f39502578bbf926d5980629fc4722b8d71bd05f9"
+      },
+      {
+        "path": "public/big-two/art/adelia-cutin.webp",
+        "size": [
+          960,
+          640
+        ],
+        "bytes": 94402,
+        "sha256": "321b31471101aece157ee3a12538a501495b2b24f3cddbf9d55a8397307a314b",
+        "source_sha256": "01d9fa8ac4d3726bf0c417e5ca804e4a34e6a733d31cf0f2875de3e44ea09e80"
+      },
+      {
+        "path": "public/big-two/art/adelia-cutin-480.webp",
+        "size": [
+          480,
+          320
+        ],
+        "bytes": 34464,
+        "sha256": "49170bbceb1e7d698fea4ebd9bd043c4571e4903c1282f69d7c947fb814cd243",
+        "source_sha256": "01d9fa8ac4d3726bf0c417e5ca804e4a34e6a733d31cf0f2875de3e44ea09e80"
+      },
+      {
+        "path": "public/big-two/art/dylan-cutin.webp",
+        "size": [
+          960,
+          640
+        ],
+        "bytes": 128136,
+        "sha256": "e21d36051cedcdc7bf7fc08db6258df60879a0920d2ecae2521746131f546306",
+        "source_sha256": "c04d867ad3d0aa83758798df1e88501c7e55fbe73e29d9de4dcdcfac40f3cdcb"
+      },
+      {
+        "path": "public/big-two/art/dylan-cutin-480.webp",
+        "size": [
+          480,
+          320
+        ],
+        "bytes": 43786,
+        "sha256": "c472c2d1e736deae6adbebe150fc5f9f8bac0521847db188530b79a0fac2367d",
+        "source_sha256": "c04d867ad3d0aa83758798df1e88501c7e55fbe73e29d9de4dcdcfac40f3cdcb"
+      }
+    ]
+  }
+}

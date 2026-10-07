@@ -1,0 +1,27 @@
+/* Short, one-shot transitions. No state delays or animation on the grip layers. */
+.wc-round-entrance{position:fixed;inset:0;z-index:180;pointer-events:none;overflow:hidden;isolation:isolate;animation:wc-curtain-life 850ms linear both}
+.wc-shutter{position:absolute;inset:-20%;will-change:transform;transform:skewX(-13deg)}
+.wc-shutter-back{background:#ed003a;animation:wc-red-wipe 820ms cubic-bezier(.76,0,.24,1) both}
+.wc-shutter-front{background:#121016;inset:-20% -13%;border-block:12px solid #fff5df;animation:wc-black-wipe 740ms cubic-bezier(.76,0,.24,1) both}
+.wc-entrance-copy{position:absolute;left:clamp(28px,12vw,160px);top:50%;color:#fff5df;transform:translateY(-50%) rotate(-5deg);animation:wc-title-swipe 780ms cubic-bezier(.22,.75,.2,1) both}
+.wc-entrance-copy>span{display:block;font:700 clamp(10px,2vw,14px)/1.3 Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;max-width:75vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wc-entrance-copy>strong{display:block;font:italic 900 clamp(64px,15vw,150px)/.78 WildCardsDisplay,Impact,sans-serif;letter-spacing:-.05em;margin:20px 0}
+.wc-entrance-copy em{font:inherit;color:#ff3155;padding-left:.4em}
+.wc-entrance-copy>i{display:block;font:normal 20px/1 Arial,sans-serif;letter-spacing:.6em}
+@keyframes wc-curtain-life{0%,99%{visibility:visible}100%{visibility:hidden}}
+@keyframes wc-red-wipe{0%{transform:translateX(-120%) skewX(-13deg)}24%,64%{transform:translateX(0) skewX(-13deg)}100%{transform:translateX(120%) skewX(-13deg)}}
+@keyframes wc-black-wipe{0%{transform:translateX(-120%) skewX(-13deg)}28%,64%{transform:translateX(0) skewX(-13deg)}100%{transform:translateX(125%) skewX(-13deg)}}
+@keyframes wc-title-swipe{0%,18%{opacity:0;transform:translate(-50px,-50%) rotate(-5deg)}32%,62%{opacity:1;transform:translate(0,-50%) rotate(-5deg)}100%{opacity:0;transform:translate(85px,-50%) rotate(-5deg)}}
+.b2-motion .b2-lobby-controls{animation:wc-content-enter 420ms cubic-bezier(.2,.8,.2,1) both}
+.b2-motion .b2-selected-art{animation:wc-character-enter 540ms cubic-bezier(.2,.8,.2,1) both}
+.b2-motion .b2-results[open],.fp-shell:not(.fp-still) .fp-round-result[open]{animation:wc-result-enter 380ms cubic-bezier(.16,1,.3,1) both}
+.b2-motion .b2-results[open]::backdrop,.fp-shell:not(.fp-still) .fp-round-result[open]::backdrop{animation:wc-backdrop-enter 240ms ease-out both}
+.b2-motion .b2-results[open] .b2-result-art,.fp-shell:not(.fp-still) .fp-round-result[open] .fp-winner-portrait{animation:wc-content-enter 440ms 60ms ease-out both}
+.b2-motion .b2-results[open] .wc-round-score,.fp-shell:not(.fp-still) .fp-round-result[open] .wc-round-score{animation:wc-content-enter 340ms 140ms ease-out both}
+.b2-motion .b2-results[open] .b2-primary,.fp-shell:not(.fp-still) .fp-round-result[open] .fp-next-round{animation:wc-content-enter 300ms 210ms ease-out both}
+@keyframes wc-content-enter{from{opacity:0;translate:0 12px}to{opacity:1;translate:0 0}}
+@keyframes wc-character-enter{from{opacity:0;translate:24px 0}to{opacity:1;translate:0 0}}
+@keyframes wc-result-enter{from{opacity:0;translate:0 22px;scale:.97}to{opacity:1;translate:0 0;scale:1}}
+@keyframes wc-backdrop-enter{from{opacity:0}to{opacity:1}}
+@media(max-height:480px){.wc-entrance-copy>strong{font-size:clamp(54px,18vh,90px);margin:12px 0}.wc-entrance-copy>i{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.wc-round-entrance{display:none}.b2-motion .b2-lobby-controls,.b2-motion .b2-selected-art,.b2-motion .b2-results[open],.b2-motion .b2-results[open] *,.fp-shell .fp-round-result[open],.fp-shell .fp-round-result[open] *{animation:none!important}.b2-results[open]::backdrop,.fp-round-result[open]::backdrop{animation:none!important}}

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "scarab-active",
+    "prompt": "Use case: precise-object-edit. Edit the provided original game asset to its activated state. Preserve original camera, center placement, material identity, scale, shape details, lighting quality, and genuinely transparent alpha background. Same square 1254 by 1254 image dimensions. Premium AAA arcane-tech mechanical brass and oxidized teal, azure energy. This image crossfades directly over original. No UI, text, logo, watermark, other characters, ground, or backdrop. Keep whole object visible. Change only the following activation state: Scarab generator fully awake, articulated legs extended outward slightly, brilliant cyan energy core with contained fine energy filaments, new cyan trim active. No excessive particles outside object.",
+    "generated": "/workspace/scratch/1a9c166ebcfa/generated_images/exec-f138cba7-8f24-481b-99cb-49530a85bb2c.png"
+  },
+  {
+    "name": "gyroscope-active",
+    "prompt": "Use case: precise-object-edit. Edit the provided original game asset to its activated state. Preserve original camera, center placement, material identity, scale, shape details, lighting quality, and genuinely transparent alpha background. Same square 1254 by 1254 image dimensions. Premium AAA arcane-tech mechanical brass and oxidized teal, azure energy. This image crossfades directly over original. No UI, text, logo, watermark, other characters, ground, or backdrop. Keep whole object visible. Change only the following activation state: Same Atlas gyroscope rings rotated to visibly different configuration, inner orb alive with contained luminous cyan filaments, apparatus stable center.",
+    "generated": "/workspace/scratch/1a9c166ebcfa/generated_images/exec-fe8b05cb-b8f9-4472-8d46-96dce36a7eb7.png"
+  },
+  {
+    "name": "owl-active",
+    "prompt": "Use case: precise-object-edit. Edit the provided original game asset to its activated state. Preserve original camera, center placement, material identity, scale, shape details, lighting quality, and genuinely transparent alpha background. Same square 1254 by 1254 image dimensions. Premium AAA arcane-tech mechanical brass and oxidized teal, azure energy. This image crossfades directly over original. No UI, text, logo, watermark, other characters, ground, or backdrop. Keep whole object visible. Change only the following activation state: Same mechanical owl drone now alert with wings elegantly unfolding halfway out and head slightly upright, cyan lens eyes and engine brightly active. Fit all wings within image with generous margins, same body scale if possible.",
+    "generated": "/workspace/scratch/1a9c166ebcfa/generated_images/exec-e5e1a5be-048c-418b-a0f9-b8c1e811ab08.png"
+  },
+  {
+    "name": "reactor-active",
+    "prompt": "Use case: precise-object-edit. Edit the provided original game asset to its activated state. Preserve original camera, center placement, material identity, scale, shape details, lighting quality, and genuinely transparent alpha background. Same square 1254 by 1254 image dimensions. Premium AAA arcane-tech mechanical brass and oxidized teal, azure energy. This image crossfades directly over original. No UI, text, logo, watermark, other characters, ground, or backdrop. Keep whole object visible. Change only the following activation state: Same Aether reactor, crystal levitating and brilliantly charged cyan inside glass chamber, ring coil energy alive, contained glow, exactly same body silhouette and framing.",
+    "generated": "/workspace/scratch/1a9c166ebcfa/generated_images/exec-8ba1fdc9-9646-4668-a9b3-948ec67252f1.png"
+  }
+]

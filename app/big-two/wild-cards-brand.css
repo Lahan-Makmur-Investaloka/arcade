@@ -1,0 +1,18 @@
+@font-face{font-family:WildCardsDisplay;src:url('/big-two/portrait/fonts/tekad-display-v2.woff') format('woff');font-display:swap}
+.wc-brand.wc-brand{display:inline-flex;flex-direction:column;align-items:flex-start;gap:7px;position:relative;isolation:isolate;background:transparent;padding:0;border:0;box-shadow:none;color:#fff8e9;vertical-align:middle;white-space:nowrap;max-width:100%;font-family:WildCardsDisplay,Impact,sans-serif;line-height:1;text-align:left;transform:rotate(-3deg);text-shadow:none}
+.wc-brand .wc-brand-main{display:block;font:italic 800 clamp(64px,8vw,118px)/.83 WildCardsDisplay,Impact,sans-serif;letter-spacing:-.055em;color:#fff8e9;text-shadow:3px 4px 0 #141016;margin:0;padding:0}
+.wc-brand .wc-brand-two{display:inline-block;color:#fff8e9;font:inherit;letter-spacing:inherit;transform:rotate(5deg);margin-left:1px}
+.wc-brand .wc-brand-colon{color:#ff3155;font:inherit;letter-spacing:inherit;margin-left:1px}
+.wc-brand .wc-brand-sub{display:block;position:relative;background:#e00b36;color:#fff8e9;font:italic 800 clamp(24px,3.5vw,42px)/1 WildCardsDisplay,Impact,sans-serif;text-transform:uppercase;letter-spacing:.035em;padding:7px 20px 8px 12px;clip-path:polygon(0 0,100% 0,calc(100% - 10px) 100%,0 100%);border-bottom:3px solid #fff8e9;margin:0;box-shadow:none}
+.wc-brand.wc-brand-compact{flex-direction:row;align-items:center;gap:6px;transform:none}
+.wc-brand-compact .wc-brand-main{font-size:21px;text-shadow:none;letter-spacing:-.04em}
+.wc-brand-compact .wc-brand-sub{font-size:13px;padding:5px 11px 4px 6px;border-bottom-width:2px;letter-spacing:.015em}
+.b2-home .b2-splash-label>.wc-brand{display:inline-flex}
+.b2-home .b2-splash-label>span:first-child:not(.wc-brand){margin-bottom:16px}
+.wc-room-cover{position:absolute;left:28px;bottom:34px;z-index:2}
+.b2-room-brand{min-width:0}.b2-room-brand .wc-brand-main{font-size:21px}.b2-room-brand .wc-brand-sub{font-size:13px}
+.b2-root .b2-match-bar .wc-brand-main{font-size:21px}.b2-root .b2-match-bar .wc-brand-sub{font-size:13px}
+.fp-header>div{min-width:0;rotate:0deg}.fp-header .wc-brand{justify-content:center}.fp-header .wc-brand-main{font-size:22px}.fp-header .wc-brand-sub{font-size:13px}
+.console-feature-copy h1:has(.wc-brand){line-height:1;padding:4px 0 9px;overflow:visible}
+@media(max-width:700px){.b2-home .b2-splash{height:180px}.b2-home .b2-splash-label{bottom:22px}.b2-home .b2-splash-label .wc-brand-main,.wc-room-cover .wc-brand-main{font-size:62px}.b2-home .b2-splash-label .wc-brand-sub,.wc-room-cover .wc-brand-sub{font-size:23px}.wc-room-cover{left:20px;bottom:24px}.b2-home .b2-splash-label>.wc-brand{display:inline-flex}.console-feature-copy .wc-brand-main{font-size:72px}.console-feature-copy .wc-brand-sub{font-size:27px}.b2-room-brand img{width:28px;height:28px}.b2-room-header{gap:10px}}
+@media(max-width:360px){.fp-header .wc-brand{gap:4px}.fp-header .wc-brand-main{font-size:19px}.fp-header .wc-brand-sub{font-size:11px}.b2-room-brand .wc-brand{gap:4px}.b2-room-brand .wc-brand-main{font-size:18px}.b2-room-brand .wc-brand-sub{font-size:11px}.b2-room-brand img{display:none}}

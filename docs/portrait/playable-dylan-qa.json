@@ -1,0 +1,65 @@
+{
+  "name": "dylan",
+  "size": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alpha_min": 0,
+  "alpha_max": 254,
+  "transparent_percent": 37.80326843261719,
+  "partial_percent": 62.19673156738281,
+  "opaque_percent": 0.0,
+  "vertical_divider_alpha_max": [
+    253,
+    253,
+    253,
+    253
+  ],
+  "horizontal_divider_alpha_max": 1,
+  "corners_alpha": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "cell_local_bbox_alpha_gt32": [
+    [
+      20,
+      14,
+      512,
+      502
+    ],
+    [
+      0,
+      14,
+      512,
+      501
+    ],
+    [
+      0,
+      14,
+      505,
+      501
+    ],
+    [
+      31,
+      6,
+      512,
+      495
+    ],
+    [
+      0,
+      5,
+      512,
+      495
+    ],
+    [
+      0,
+      6,
+      509,
+      495
+    ]
+  ],
+  "visual_qa": "Six states in correct row-major order. Character/costume match. Card backs patterned. True alpha present; bounds and clear-gutter constraint failed. No retries performed."
+}

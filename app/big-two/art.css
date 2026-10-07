@@ -1,0 +1,51 @@
+/* Stage 3A: original character poses, illustrated deck and table materials. */
+.b2-splash.b2-character-stage{background:#17131b;isolation:isolate}
+.b2-character-stage>img.b2-cover-layer{opacity:.24;filter:saturate(.55);object-position:center}
+.b2-character-stage:before{content:'';position:absolute;inset:0;z-index:0;background:linear-gradient(130deg,transparent 30%,color-mix(in srgb,var(--cast) 24%,transparent) 100%)}
+.b2-character-stage .b2-selected-art{position:absolute;z-index:1;right:-6%;bottom:0;width:94%;height:95%;object-fit:contain;object-position:bottom center;filter:drop-shadow(12px 15px 0 #0007)}
+.b2-character-stage:after{z-index:2;background:linear-gradient(0deg,#0a0810d9,transparent 35%),linear-gradient(90deg,#100b1280,transparent 43%)}
+.b2-character-stage .b2-splash-label{z-index:3;bottom:43px;left:30px;pointer-events:none}
+.b2-character-stage .b2-splash-label strong{font-size:clamp(90px,10vw,150px)}
+.b2-character-stage .b2-splash-label>span{font-size:13px}
+.b2-character-stage .b2-edition{z-index:4;letter-spacing:.08em;font-size:13px;border-left:3px solid var(--cast)}
+.b2-player-selection{padding-block:6px}.b2-cast-choice .b2-portrait{filter:grayscale(.35) brightness(.9)}
+.b2-card{background:#fffaf0;box-shadow:1px 1px 0 #e3d4c8,2px 5px 7px #0007;isolation:isolate}
+.b2-card:before{content:'';position:absolute;inset:4px;border:1px solid #a5907938;border-radius:3px;pointer-events:none;z-index:-1}
+.b2-card-corner{z-index:2;text-shadow:0 0 4px #fffaf0,0 0 4px #fffaf0}
+.b2-court-art{position:absolute;inset:21% 17% 13%;overflow:hidden;border:0;background:#fffaf0;pointer-events:none}
+.b2-court-art img{width:100%;height:100%;object-fit:contain;object-position:center;display:block}
+.b2-ace-card .b2-card-pip{font-size:50px;top:48%;text-shadow:0 2px #bbaa9160}
+.b2-mini-hand i,.b2-deck,.b2-deal-flight i{background:#941b30 url('/big-two/art/deck-back.webp') center/100% 100%;border-color:#f9ecd9;color:transparent;border-radius:3px}
+.b2-table-lines{inset:-2% -7%;background:#27101a url('/big-two/art/table-felt.webp') center/100% 100%;border:1px solid #ad677650;border-radius:24%;clip-path:none;transform:none;box-shadow:0 16px 30px #0006,inset 0 0 24px #0008}
+.b2-table-watermark{opacity:.075;font-family:Arial,Helvetica,sans-serif;font-weight:900;font-size:38px;letter-spacing:.07em;transform:none;line-height:1.05}
+.b2-table-empty{background:#130d17b3;border:1px solid #e8cdbc25;padding:15px 22px;backdrop-filter:blur(2px)}
+.b2-play-label>span{max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.b2-opponent-image{background:linear-gradient(135deg,color-mix(in srgb,var(--cast) 25%,#17121b),#17121b)}
+.b2-root .b2-opponent-image .b2-character-art{object-fit:contain;object-position:center top;height:100%;width:100%;margin:0}
+.b2-root .b2-cutin .b2-character-art{object-fit:contain;object-position:center;mix-blend-mode:normal;height:100%;width:38%;margin:0;padding:7px;align-self:center;flex:0 0 38%;transform:none;filter:drop-shadow(5px 2px 0 #15101899)}
+.b2-root .b2-result-art{background:linear-gradient(150deg,color-mix(in srgb,var(--cast) 45%,#271625),#19101a);isolation:isolate}
+.b2-result-art:after{content:'';position:absolute;inset:0;z-index:-1;background:repeating-linear-gradient(135deg,transparent 0 15px,#ffffff08 15px 17px)}
+.b2-root .b2-result-art .b2-character-art{position:absolute;inset:0;width:100%;height:100%;min-height:0;object-fit:contain;object-position:center bottom;mix-blend-mode:normal;margin:0;filter:drop-shadow(5px 5px 0 #0005)}
+.b2-result-art>span{font-family:Arial,Helvetica,sans-serif;font-weight:900;font-size:130px;opacity:.2;z-index:-1;bottom:8px;left:15px;transform:none;text-shadow:none}
+.b2-result-art>small{position:absolute;top:20px;left:20px;font-size:13px;letter-spacing:.1em;font-weight:900;color:#fffaf0;background:#121017cc;padding:7px 10px}
+.b2-root .b2-hand-heading .b2-character-art{object-fit:cover;object-position:center 8%;background:#332531}
+@media(min-width:1400px){.b2-character-stage .b2-selected-art{right:0;width:90%}.b2-character-stage .b2-splash-label strong{font-size:160px}.b2-hand .b2-court-art{inset:11% 18%}}
+@media(max-width:1000px){.b2-character-stage .b2-selected-art{width:96%;right:0;height:88%}.b2-character-stage .b2-splash-label{left:20px;bottom:40px}.b2-character-stage .b2-splash-label strong{font-size:95px}.b2-court-art{inset:13% 20%}.b2-table-lines{inset:0 -3%}}
+@media(max-width:700px){
+ .b2-character-stage{height:340px}.b2-character-stage .b2-selected-art{width:77%;height:96%;right:0;bottom:0}.b2-character-stage .b2-splash-label{left:20px;bottom:28px}.b2-character-stage .b2-splash-label strong{font-size:76px}.b2-character-stage .b2-splash-label>span{font-size:12px;max-width:130px}.b2-character-stage .b2-edition{font-size:12px;right:12px;top:12px}
+ .b2-table-lines{inset:-2% 0;border-radius:18%;box-shadow:0 9px 15px #0006,inset 0 0 15px #0007}.b2-table-watermark{font-size:26px}.b2-table-empty{padding:11px 15px}.b2-empty-suit{font-size:30px}
+ .b2-hand .b2-card-corner{flex-direction:row;gap:2px;align-items:baseline;left:4px;top:5px}.b2-hand .b2-card-corner b{font-size:20px;letter-spacing:-.04em}.b2-hand .b2-card-corner i{font-size:16px;margin:0}
+ .b2-hand .b2-court-art{inset:30% 4% 5%}.b2-hand .b2-court-art img{object-position:center}.b2-hand .b2-court-art>i{display:none}.b2-hand .b2-card-pip{top:65%;left:50%;font-size:29px}.b2-hand .b2-ace-card .b2-card-pip{font-size:37px}
+ .b2-pile .b2-court-art{inset:22% 18% 14%}.b2-pile .b2-court-art>i{display:none}.b2-pile .b2-ace-card .b2-card-pip{font-size:34px}.b2-card:before{inset:3px}
+ .b2-root .b2-cutin .b2-character-art{width:38%;height:100%;margin:0;object-position:center}.b2-cutin>div{padding-left:0}.b2-cutin strong{font-size:clamp(25px,6.7vw,34px)}
+ .b2-root .b2-result-art{height:235px}.b2-root .b2-result-art .b2-character-art{width:82%;left:18%;height:100%;top:0;object-position:center bottom}.b2-result-art>span{font-size:120px;bottom:12px}.b2-result-art>small{font-size:12px;left:16px;top:16px}.b2-result-copy{padding:24px}
+}
+@media(max-width:360px){.b2-character-stage{height:290px}.b2-character-stage .b2-splash-label strong{font-size:65px}.b2-character-stage .b2-splash-label>span{font-size:10px}.b2-hand .b2-card-corner b{font-size:19px}.b2-hand .b2-card-corner i{font-size:15px}.b2-result-copy{padding:20px}}
+@media(max-height:600px) and (min-width:701px){.b2-table-lines{inset:2% 0}.b2-root .b2-result-art .b2-character-art{object-fit:contain}.b2-pile .b2-court-art{inset:14% 22%}}
+
+/* Keep all character pixels inside the banner, including during its entrance. */
+.b2-cutin{left:0;right:0;gap:8px}
+.b2-cutin>div{min-width:0}
+.b2-cutin strong{overflow-wrap:anywhere}
+.b2-court-art>i{display:none}
+@media(max-width:700px){.b2-cutin{left:4px;right:4px;height:132px;top:13px}.b2-cutin>div{padding:8px 12px 8px 0}.b2-hand .b2-card-corner{right:4px;padding-bottom:4px;border-bottom:1px solid #16131b18;justify-content:flex-start}.b2-court-card:before{border-color:#a5907950}}

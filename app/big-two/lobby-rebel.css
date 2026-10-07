@@ -1,0 +1,33 @@
+@font-face{font-family:TekadDisplay;src:url('/big-two/portrait/fonts/tekad-display-v2.woff') format('woff');font-display:swap}
+.b2-home .b2-lobby-controls{background:radial-gradient(ellipse at 100% 0,#ed123521,transparent 55%),#111116;gap:0}
+.b2-home .b2-lobby-heading h1{font:clamp(42px,5vw,68px)/.96 TekadDisplay,Impact,sans-serif;text-transform:uppercase;color:#fff8e9;letter-spacing:-.025em}
+.b2-home .b2-lobby-heading p{margin:12px 0 24px;color:#c3bdc7}
+.b2-mode-heading{display:grid;gap:7px;border-top:1px solid #ffffff26;padding-top:20px}
+.b2-mode-heading>span{font:12px/1.3 TekadDisplay,sans-serif;letter-spacing:.13em;color:#ff5474}
+.b2-mode-heading>b{font:22px/1.15 TekadDisplay,sans-serif;color:#fff8e9}
+.b2-mode-heading>small{font-size:12px;color:#bab5c2;line-height:1.5}
+.b2-home .b2-cast-picker{margin:23px 0 26px;gap:8px}
+.b2-home .b2-cast-choice{height:145px;transform:skewY(-4deg);border:1px solid #a7a0ac;box-shadow:3px 4px 0 #050508;transition:transform .18s,border-color .18s}
+.b2-home .b2-cast-choice .b2-portrait{height:125px;filter:none}
+.b2-home .b2-cast-choice.chosen{transform:skewY(-4deg);border-color:#a7a0ac;box-shadow:3px 4px 0 #050508}
+.b2-home .b2-cast-choice span{background:#111116ed;font:14px/1.3 TekadDisplay,sans-serif;padding:7px 0 5px}
+.b2-home .b2-cast-choice small{display:block;color:var(--cast);font:9px/1.5 Arial,sans-serif;letter-spacing:.08em;margin-top:3px}
+.b2-home .b2-cast-choice:hover,.b2-home .b2-cast-choice:focus-visible{transform:translateY(-6px) skewY(-4deg);border-color:var(--cast);box-shadow:3px 4px 0 var(--cast)}
+.b2-classic-heading{margin-bottom:15px}
+.b2-home .b2-primary{border:0;border-bottom:4px solid #fff8e9;clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);font:24px/1.15 TekadDisplay,sans-serif;min-height:72px;background:#e00b36;box-shadow:none;padding:18px;text-transform:uppercase;text-align:left}
+.b2-home .b2-primary.b2-secondary{background:#26232d;border-bottom-color:#746c80;font-size:21px;min-height:74px;margin-top:12px}
+.b2-home .b2-mode-copy{display:grid;gap:5px;font-size:inherit}
+.b2-home .b2-mode-copy>b{font:inherit}
+.b2-home .b2-mode-copy>small{font:12px/1.4 Arial,sans-serif;text-transform:none;color:#c8c1d2}
+.b2-home .b2-session-buttons{gap:8px;margin:15px 0 7px;flex-wrap:wrap}
+.b2-home .b2-session-buttons button{min-height:44px;background:#1b1922;border:1px solid #777080;border-bottom:3px solid #777080;color:#e7e0ee;padding:10px 13px;font-size:12px}
+.b2-home button:focus-visible,.b2-home a:focus-visible{outline:3px solid #ff5474;outline-offset:4px}
+.b2-home .b2-local-note{line-height:1.6}
+@media(max-width:700px){.b2-home .b2-splash{height:230px}.b2-home .b2-lobby-controls{padding:27px 20px 32px}.b2-home .b2-splash-label strong{font-size:72px}.b2-home .b2-cast-choice{height:130px}.b2-home .b2-cast-choice .b2-portrait{height:112px}.b2-home .b2-cast-choice span{font-size:12px}.b2-mode-heading>b{font-size:20px}}
+@media(max-width:360px){.b2-home .b2-lobby-controls{padding-inline:14px}.b2-home .b2-cast-picker{gap:5px}.b2-home .b2-cast-choice{height:115px}.b2-home .b2-cast-choice .b2-portrait{height:100px}.b2-home .b2-cast-choice span{font-size:11px}.b2-home .b2-primary{font-size:21px}}
+@media(prefers-reduced-motion:reduce){.b2-home .b2-cast-choice{transition:none}}
+.b2-mode-options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 22px}.b2-mode-options button{display:grid;gap:7px;text-align:left;background:#25212c;color:#fff8e9;border:1px solid #706778;border-bottom:4px solid #706778;min-height:84px;padding:13px 12px}.b2-mode-options b{font:20px/1.15 TekadDisplay,Impact,sans-serif}.b2-mode-options small{font:11px/1.5 Arial,sans-serif;color:#ccc4d3}.b2-mode-options button[aria-pressed=true]{background:#fff8e9;color:#18131c;border-color:#ff3155;box-shadow:4px 4px 0 #d81035}.b2-mode-options button[aria-pressed=true] small{color:#544958}.b2-launch-summary{display:grid;gap:7px;padding:0 0 18px}.b2-launch-summary b{font:18px TekadDisplay,sans-serif;color:#fff8e9}.b2-launch-summary span{font-size:12px;color:#c8bece;line-height:1.5}.b2-home .b2-cast-choice[aria-pressed=true]{border-color:var(--cast);box-shadow:3px 4px 0 var(--cast);transform:translateY(-5px) skewY(-4deg)}.b2-home .b2-cast-choice:disabled{opacity:.45}.b2-home .b2-primary:disabled{background:#37313e;color:#aaa1b3;border-color:#605767;cursor:not-allowed}
+.b2-home .b2-lobby-heading h1,.b2-mode-options b,.b2-home .b2-primary,.b2-mode-heading>b,.b2-launch-summary b{font-weight:800;font-style:italic;text-transform:uppercase}
+@media(max-width:700px){.b2-home .b2-splash{height:140px}.b2-home .b2-splash-label{bottom:16px;left:20px}.b2-home .b2-splash-label strong{font-size:48px;margin-top:8px}.b2-home .b2-splash-label>span,.b2-home .b2-splash-label small{display:none}.b2-home .b2-lobby-controls{padding-top:22px}.b2-home .b2-lobby-heading p{margin-bottom:18px}.b2-mode-heading{padding-top:14px}.b2-mode-options{margin-bottom:16px}.b2-mode-options b{font-size:18px}.b2-home .b2-cast-picker{margin:17px 0 20px}}
+/* Labels on the lobby; explanations live in the info dialog. */
+.b2-home .b2-lobby-heading{margin-bottom:22px}.b2-mode-options button{min-height:62px;align-content:center}.b2-home .b2-start-game{margin-top:6px}.b2-mode-guide{display:grid;gap:18px;margin-bottom:24px;border-bottom:1px solid #ffffff30;padding-bottom:24px}.b2-mode-guide h3{color:#fff8e9;font-size:17px;margin:0 0 7px}.b2-mode-guide p{font-size:14px;line-height:1.6;color:#cfc7d7;margin:0}.b2-home .b2-header-tools button[aria-label="Informasi permainan"]{font-size:25px}

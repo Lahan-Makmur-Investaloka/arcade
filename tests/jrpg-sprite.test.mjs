@@ -1,0 +1,13 @@
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+import ts from 'typescript';
+const source=readFileSync('app/tekad-jrpg/timmy-sprite.tsx','utf8').split('export default function')[0].replace(/^import .*$/mg,'');
+const js=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.ESNext}}).outputText;
+const {spritePose}=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
+for(const [action,row] of [['attack',2],['bash',3],['guard',4],['potion',6]])assert.deepEqual(spritePose({phase:'party',lastActor:'timmy',lastAction:action},400),[row,2]);
+assert.equal(spritePose({phase:'party',lastActor:'kirana',lastAction:'heal'},400)[0],0);
+assert.deepEqual(spritePose({phase:'lost'},10000),[8,3]);
+assert.deepEqual(spritePose({phase:'won'},10000),[7,3]);
+assert.deepEqual(spritePose({phase:'player',heroDamage:34},200),[5,1]);
+assert.equal(spritePose({phase:'player',heroDamage:34},800)[0],0);
+console.log('Sprite checks passed: actions, hit recovery, final victory and defeat holds.');

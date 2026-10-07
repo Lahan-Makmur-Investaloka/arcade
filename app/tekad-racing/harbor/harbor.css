@@ -1,0 +1,112 @@
+.harbor-game { --harbor-ink: #102739; --harbor-gold: #ffcd61; width: min(1400px, 100%); margin: 0 auto; color: #fff; font-family: Arial, Helvetica, sans-serif; }
+.harbor-game button { font: inherit; cursor: pointer; }
+.harbor-coursebar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.harbor-coursebar > div { display: flex; align-items: center; gap: 12px; }
+.harbor-coursebar span { padding: 6px 9px; border: 1px solid #769cb369; border-radius: 6px; color: #a9cddf; font-size: 12px; font-weight: 700; letter-spacing: .1em; }
+.harbor-coursebar strong { font-size: 18px; }
+.harbor-neon, .racing-course-return button { min-height: 44px; padding: 8px 14px; border: 1px solid #53738b; border-radius: 8px; color: #eaf6ff; background: #14283b; font-size: 14px; }
+.racing-course-return { max-width: 1180px; margin: 0 auto 12px; }
+.harbor-viewport { position: relative; height: clamp(420px, 67dvh, 850px); overflow: hidden; border-radius: 20px; border: 1px solid #789da05c; background: linear-gradient(#8ac9e6,#b7dbe5); isolation: isolate; box-shadow: 0 24px 64px #0004; }
+.harbor-viewport canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+.harbor-lap, .harbor-time, .harbor-speed { position: absolute; z-index: 1; pointer-events: none; text-shadow: 0 2px 4px #0007; font-variant-numeric: tabular-nums; }
+.harbor-lap { top: 20px; left: 24px; padding: 10px 16px; border-radius: 12px; background: #123548cc; backdrop-filter: blur(8px); }
+.harbor-lap > span, .harbor-time > span { display: block; font-size: 12px; font-weight: 700; letter-spacing: .14em; }
+.harbor-lap strong { display: block; font-size: 42px; line-height: 1.1; }
+.harbor-lap small { font-size: 20px; color: #cde6ed; }
+.harbor-time { top: 22px; left: 50%; transform: translateX(-50%); text-align: center; padding: 10px 16px; background: #123548b8; border-radius: 12px; }
+.harbor-time strong { display: block; font-size: 24px; margin-top: 3px; }
+.harbor-pause { position: absolute; z-index: 2; right: 22px; top: 22px; width: 48px; height: 48px; border: 1px solid #fff9; border-radius: 50%; color: #fff; background: #15374de3; font-weight: 900 !important; font-size: 24px !important; }
+.harbor-speed { left: 26px; bottom: 22px; display: flex; align-items: baseline; gap: 8px; padding: 10px 18px; background: #123548ba; border-radius: 12px; }
+.harbor-speed strong { font-size: clamp(38px, 5vw, 64px); line-height: 1; font-style: italic; }
+.harbor-speed span { font-size: 12px; font-weight: 700; }
+.harbor-map { position: absolute; bottom: 16px; right: 20px; width: clamp(90px, 13vw, 150px); pointer-events: none; border-radius: 18px; background: #10273960; }
+.harbor-map svg { display: block; width: 100%; }
+.harbor-feedback { position: absolute; left: 50%; bottom: 98px; transform: translateX(-50%); padding: 9px 16px; background: #102739e8; border: 1px solid #ffd273; border-radius: 9px; color: #ffe4a4; font-size: 14px; font-weight: 700; white-space: nowrap; }
+.harbor-drift-meter { --drift-color:#c3e5ec; position:absolute; bottom:24px; left:50%; transform:translateX(-50%); width:min(260px,42%); padding:10px 12px; background:#102739ef; border:1px solid #bfe5ef55; border-radius:12px; pointer-events:none; }
+.harbor-drift-meter[data-tier="1"] { --drift-color:#58d4ff; border-color:#58d4ff; }
+.harbor-drift-meter[data-tier="2"] { --drift-color:#ffd16e; border-color:#ffd16e; }
+.harbor-drift-meter > div:first-child { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:8px; }
+.harbor-drift-meter strong { color:var(--drift-color); font-size:14px; white-space:nowrap; }
+.harbor-drift-meter span { font-size:12px; color:#e4eff4; text-align:right; }
+.harbor-drift-track { height:7px; border-radius:4px; background:#ffffff24; position:relative; overflow:hidden; }
+.harbor-drift-track i { position:absolute; inset:0; background:var(--drift-color); transform-origin:left; transition:transform .09s linear; }
+.harbor-drift-track b { position:absolute; left:48.48%; top:0; bottom:0; width:2px; background:#102739; }
+.harbor-drift-meter[data-boost="true"] .harbor-drift-track b { display:none; }
+.harbor-overlay { position: absolute; z-index: 4; inset: 0; display: grid; align-items: safe center; justify-items: center; padding: 24px; overflow: auto; background: #0a213bc4; backdrop-filter: blur(5px); }
+.harbor-overlay.harbor-ready { justify-items: start; background: linear-gradient(90deg,#061a30ed 0%,#0e294b9c 40%,#0a243000 85%); backdrop-filter: none; }
+.harbor-intro { width: min(430px, 42%); padding: 20px clamp(0px, 2vw, 28px); }
+.harbor-kicker { font-size: 12px; font-weight: 800; letter-spacing: .2em; color: #ffdb82; }
+.harbor-overlay h2 { margin: 12px 0; font-size: clamp(38px, 5vw, 66px); line-height: 1.05; letter-spacing: -.04em; }
+.harbor-overlay p { margin: 12px 0 24px; font-size: 16px; line-height: 1.6; color: #d5e6ef; }
+.harbor-overlay .harbor-hint { margin-top: 20px; font-size: 14px; max-width: 320px; }
+.harbor-primary, .harbor-secondary { display: block; width: 100%; min-height: 50px; padding: 13px 20px; border-radius: 10px; border: 1px solid transparent; font-size: 16px !important; font-weight: 700 !important; }
+.harbor-primary { background: var(--harbor-gold); color: #122a3d; box-shadow: 0 4px 0 #a5782c; }
+.harbor-secondary { margin-top: 12px; background: #193952; border-color: #ffffff30; color: #fff; }
+.harbor-dialog { width: min(380px, 100%); text-align: center; padding: 8px; }
+.harbor-exit { display: block; grid-column: 1/-1; padding: 12px; color: #d5e6ef; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+.harbor-quality { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; margin-top: 12px; font-size: 14px; cursor: pointer; }
+.harbor-quality input { width: 20px; height: 20px; accent-color: #ffcd61; }
+.harbor-controls { display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: center; margin-top: 14px; }
+.harbor-steering, .harbor-pedals { display: flex; gap: 10px; }
+.harbor-controls button { width: 78px; height: 64px; border: 1px solid #648293; border-bottom-width: 4px; border-radius: 14px; color: #edf7fb; background: linear-gradient(#2b495e,#152c40); font-weight: 800; touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+.harbor-steering button { font-size: 30px; }
+.harbor-pedals button:last-child { color: #1b2d3a; background: linear-gradient(#ffe3a0,#ffca62); border-color: #bd8d3e; }
+.harbor-pedals .harbor-control-drift { background:linear-gradient(#205579,#153148); border-color:#61b8dc; color:#b7edff; }
+.harbor-pedals .harbor-control-drift[aria-pressed="true"] { background:#3aa6d0; color:#082235; border-color:#9be8ff; }
+.harbor-controls button:active:not(:disabled) { transform: translateY(2px); border-bottom-width: 2px; }
+.harbor-controls p { font-size: 13px; line-height: 1.5; color: #acc4d3; text-align: center; }
+.harbor-game button:disabled { opacity: .45; cursor: default; }
+.harbor-game button:focus-visible, .harbor-game input:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+.harbor-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 10px; color: #9db5c4; font-size: 12px; }
+.harbor-footer button { min-height: 44px; padding: 8px 12px; border: 0; color: #b5d6e7; background: transparent; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width:600px) {
+ .harbor-viewport { height: clamp(430px, 62dvh, 720px); border-radius: 14px; }
+ .harbor-overlay { padding: 20px; }
+ .harbor-overlay.harbor-ready { align-items: safe end; background: linear-gradient(0deg,#061a30f5 0%,#0e294bc9 40%,#0a243000 90%); }
+ .harbor-intro { padding: 0 0 10px; width: 100%; }
+ .harbor-overlay h2 { font-size: 42px; }
+ .harbor-overlay p { font-size: 14px; margin-bottom: 18px; }
+ .harbor-intro .harbor-hint { margin-bottom: 0; }
+ .harbor-intro > .harbor-kicker { display:none; }
+ .harbor-intro h2 { font-size:32px; margin:6px 0; }
+ .harbor-intro > p { line-height:1.4; margin:4px 0 8px; }
+ .harbor-intro .harbor-hint { margin:12px 0 0; line-height:1.4; }
+ .harbor-lap { top: 12px; left: 12px; padding: 8px 10px; }
+ .harbor-lap strong { font-size: 32px; }
+ .harbor-time { top: 12px; padding: 8px 10px; }
+ .harbor-time strong { font-size: 20px; }
+ .harbor-pause { top: 12px; right: 12px; }
+ .harbor-speed { left: 12px; bottom: 12px; padding: 10px; gap: 4px; }
+ .harbor-map { right: 8px; bottom: 10px; }
+ .harbor-controls { grid-template-columns: auto auto; justify-content: space-between; gap: 8px; }
+ .harbor-controls p { display: none; }
+ .harbor-controls button { width: clamp(48px,14vw,68px); height: 62px; font-size:14px; }
+ .harbor-steering button { font-size:26px; }
+ .harbor-steering, .harbor-pedals { gap: 7px; }
+ .harbor-drift-meter { bottom:105px; width:min(260px,85%); }
+ .harbor-feedback { bottom: 177px; }
+}
+@media (max-height:560px) and (orientation:landscape) {
+ .racing-shell:has(.harbor-game) { padding: 0; }
+ .racing-shell:has(.harbor-game) .racing-nav { display: none; }
+ .harbor-game { position: relative; width: 100%; }
+ .harbor-coursebar, .harbor-footer { display: none; }
+ .harbor-viewport { height: 100svh; min-height: 300px; border: 0; border-radius: 0; }
+ .harbor-controls { position: absolute; z-index: 3; bottom: max(12px,env(safe-area-inset-bottom)); left: max(16px,env(safe-area-inset-left)); right: max(16px,env(safe-area-inset-right)); margin: 0; grid-template-columns: auto auto; justify-content: space-between; pointer-events: none; }
+ .harbor-controls button { pointer-events: auto; width: 60px; height: 54px; opacity: .9; }
+ .harbor-controls p { display: none; }
+ .harbor-speed { left: 50%; transform: translateX(-50%); bottom: 12px; padding: 6px 12px; }
+ .harbor-speed strong { font-size: 34px; }
+ .harbor-map { bottom: 80px; width: 95px; }
+ .harbor-lap, .harbor-time { top: 12px; }
+ .harbor-lap strong { font-size: 30px; }
+ .harbor-overlay { padding: 16px; }
+ .harbor-dialog { padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: min(520px,100%); }
+ .harbor-dialog .harbor-kicker,.harbor-dialog h2,.harbor-dialog p { grid-column: 1/-1; margin: 0; }
+ .harbor-dialog h2 { font-size: 38px; }
+ .harbor-dialog button,.harbor-quality { margin: 0; }
+ .harbor-controls:has(button:disabled) { visibility: hidden; }
+ .harbor-drift-meter { bottom:80px; width:220px; }
+ .harbor-feedback { bottom:150px; }
+}
+@media (prefers-reduced-motion:reduce) { .harbor-drift-track i { transition:none; } }

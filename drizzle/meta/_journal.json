@@ -1,0 +1,69 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1786867161460,
+      "tag": "0000_condemned_wolf_cub",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1786872551021,
+      "tag": "0001_empty_tony_stark",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1786930802739,
+      "tag": "0002_spicy_rafael_vega",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1786941204161,
+      "tag": "0003_red_ghost_rider",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1786990714760,
+      "tag": "0004_crazy_king_cobra",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1787016000000,
+      "tag": "0005_backfill_current_week",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1788780000000,
+      "tag": "0006_quiz_sessions",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1791085721052,
+      "tag": "0007_brown_hammerhead",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1791132464644,
+      "tag": "0008_round_the_santerians",
+      "breakpoints": true
+    }
+  ]
+}
