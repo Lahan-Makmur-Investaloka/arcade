@@ -28,7 +28,9 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
+.env
 .env*
+.dev.vars*
 
 # vercel
 .vercel
@@ -40,3 +42,6 @@ next-env.d.ts
 /.sites-runtime/
 /outputs/
 /work/
+
+# Local ChatGPT authentication helper; SSO will replace it.
+/app/chatgpt-auth.ts

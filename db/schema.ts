@@ -108,3 +108,12 @@ export const bigTwoPracticeRecords=sqliteTable('big_two_practice_records',{
  revision:integer('revision').notNull().default(0),
  updatedAt:integer('updated_at').notNull(),
 });
+// Only an opaque session ID is sent to the browser. Upstream tokens stay in D1.
+export const arcadeAuthSessions = sqliteTable('arcade_auth_sessions', {
+ idHash: text('id_hash').primaryKey(),
+ state: text('state').notNull(),
+ expiresAt: integer('expires_at').notNull(),
+ lockUntil: integer('lock_until').notNull().default(0),
+ lockId: text('lock_id'),
+ revision: integer('revision').notNull().default(0),
+}, t => [index('arcade_auth_sessions_expiry_idx').on(t.expiresAt)]);

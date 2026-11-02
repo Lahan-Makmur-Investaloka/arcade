@@ -1,5 +1,5 @@
 import vinext from "vinext";
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import hostingConfig from "./.openai/hosting.json";
 import { sites } from "./build/sites-vite-plugin";
 
@@ -13,6 +13,8 @@ const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
 
 const localBindingConfig = {
   main: "./worker/index.ts",
+  // Static game HTML (including encoded paths) must pass the session guard.
+  assets: { binding: 'ASSETS', run_worker_first: true },
   compatibility_flags: ["nodejs_compat"],
   d1_databases: d1
     ? [
@@ -33,7 +35,7 @@ const localBindingConfig = {
     : [],
 };
 
-export default defineConfig(async () => {
+export default defineConfig(async ({ command, mode }) => {
   // Keep Wrangler and Miniflare state project-local. These are non-secret tool
   // settings; application environment belongs in ignored `.env*` files.
   process.env.WRANGLER_WRITE_LOGS ??= "false";
@@ -42,6 +44,13 @@ export default defineConfig(async () => {
 
   // Wrangler snapshots its log path while the Cloudflare plugin is imported.
   const { cloudflare } = await import("@cloudflare/vite-plugin");
+
+  // Bind local server configuration only during development. Production receives
+  // these values through Worker runtime variables/secrets, never the client bundle.
+  const localSso = command === 'serve' ? loadEnv(mode, process.cwd(), 'SSO_') : {};
+  const ssoVars = command === 'serve' ? Object.fromEntries(
+    ['SSO_API_BASE_URL', 'SSO_APP_NAME', 'SSO_APP_KEY', 'SSO_APP_CODE'].map(key => [key, process.env[key] ?? localSso[key] ?? '']),
+  ) : {};
 
   return {
     server: {
@@ -57,7 +66,7 @@ export default defineConfig(async () => {
       cloudflare({
         viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },
         inspectorPort: false,
-        config: localBindingConfig,
+        config: { ...localBindingConfig, vars: ssoVars },
       }),
     ],
   };

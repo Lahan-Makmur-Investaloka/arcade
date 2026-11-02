@@ -5,14 +5,18 @@ import { useEffect, useRef, useState, type CSSProperties, type KeyboardEvent } f
 import Link from 'next/link';
 import { arcadeGames } from './arcade-catalog';
 import './arcade-home.css';
+import { AuthControls } from './auth-provider';
 
-const selectionKey = 'tekad-home-selected';
+import { selectionKey } from './arcade-selection';
+function loginPath(returnTo: string) { return `/login?returnTo=${encodeURIComponent(returnTo)}`; }
 function GridIcon() { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="3" width="6" height="6" rx="1"/><rect x="3" y="15" width="6" height="6" rx="1"/><rect x="15" y="15" width="6" height="6" rx="1"/></svg>; }
 function Arrow({ back = false }: { back?: boolean }) { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true" style={back ? {transform:'rotate(180deg)'} : undefined}><path d="m9 5 7 7-7 7"/></svg>; }
 
-export default function ArcadeHome() {
-  const [selected, setSelected] = useState(0);
-  const [scene, setScene] = useState<{active:number; previous:number | null}>({active:0, previous:null});
+// `gameId` pins the featured game (used as the login backdrop); otherwise the last selection is restored.
+export default function ArcadeHome({ gameId }: { gameId?: string } = {}) {
+  const pinned = Math.max(0, arcadeGames.findIndex(item => item.id === gameId));
+  const [selected, setSelected] = useState(pinned);
+  const [scene, setScene] = useState<{active:number; previous:number | null}>({active:pinned, previous:null});
   const artwork = scene.active, previousArtwork = scene.previous;
   const [catalogOpen, setCatalogOpen] = useState(false);
   const rail = useRef<HTMLDivElement>(null);
@@ -29,6 +33,8 @@ export default function ArcadeHome() {
     selectedRef.current = next;
     setSelected(next);
     try { sessionStorage.setItem(selectionKey, arcadeGames[next].id); } catch { /* Selection works without storage. */ }
+    // The login page is rendered on the server, so it needs the selection in a cookie to draw the right backdrop at once.
+    document.cookie = `${selectionKey}=${arcadeGames[next].id}; Path=/; Max-Age=86400; SameSite=Lax`;
     if (focus) tabs.current[next]?.focus({preventScroll:true});
   }
 
@@ -41,6 +47,7 @@ export default function ArcadeHome() {
   }, [selected]);
 
   useEffect(() => {
+    if (gameId) return;
     try {
       const stored = sessionStorage.getItem(selectionKey);
       const index = arcadeGames.findIndex(item => item.id === stored);
@@ -98,6 +105,7 @@ export default function ArcadeHome() {
     <header className="console-header">
       <a className="console-brand" href="/" aria-label="TEKAD Arcade — beranda"><img src="/branding/icon-192.png" width="42" height="42" alt=""/><span>TEKAD <b>ARCADE</b></span></a>
       <span className="console-header-section">Game</span>
+      <AuthControls />
       <button ref={libraryButton} className="console-library-button" onClick={() => setCatalogOpen(true)} aria-haspopup="dialog"><GridIcon/><span>Semua game</span></button>
     </header>
 
@@ -123,7 +131,7 @@ export default function ArcadeHome() {
         <div className="console-game-meta"><span>{game.genre}</span><i/><span>{game.players}</span>{game.chapter && <b>{game.chapter}</b>}</div>
         <p className="console-description">{game.description}</p>
         <p className="console-detail">{game.detail}</p>
-        <div className="console-actions"><Link href={game.href} prefetch={false} className="console-play" aria-label={`Main ${game.title}`}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>Main<span aria-hidden="true">→</span></Link><span className="console-platform">TEKAD ORIGINAL</span></div>
+        <div className="console-actions"><Link href={loginPath(game.href)} prefetch={false} className="console-play" aria-label={`Masuk untuk main ${game.title}`}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>Main<span aria-hidden="true">→</span></Link><span className="console-platform">TEKAD ORIGINAL</span></div>
       </div>
       <div className="console-feature-mark" aria-hidden="true"><span>{String(selected + 1).padStart(2, '0')}</span><i/>{game.genre}</div>
     </section>
@@ -131,7 +139,7 @@ export default function ArcadeHome() {
 
     <dialog ref={catalog} className="console-catalog" aria-labelledby="catalog-title" onCancel={event => { event.preventDefault(); closeCatalog(); }} onClose={() => setCatalogOpen(false)} onClick={event => { if (event.target === event.currentTarget) closeCatalog(); }}>
       <div className="console-catalog-inner"><header><div><span>TEKAD ARCADE</span><h2 id="catalog-title">Semua game <small>{arcadeGames.length}</small></h2></div><button autoFocus aria-label="Tutup daftar game" onClick={closeCatalog}>×</button></header>
-      <div className="console-catalog-grid">{arcadeGames.map(item => <a href={item.href} key={item.id} className="console-catalog-game"><img src={item.cover} alt="" width="320" height="180" loading="lazy"/><div><span>{item.genre}{item.chapter ? ` · ${item.chapter}` : ''}</span><h3>{item.title}</h3><p>{item.players}</p><b>Main <span aria-hidden="true">↗</span></b></div></a>)}</div></div>
+      <div className="console-catalog-grid">{arcadeGames.map(item => <Link href={loginPath(item.href)} key={item.id} className="console-catalog-game"><img src={item.cover} alt="" width="320" height="180" loading="lazy"/><div><span>{item.genre}{item.chapter ? ` · ${item.chapter}` : ''}</span><h3>{item.title}</h3><p>{item.players}</p><b>Main <span aria-hidden="true">↗</span></b></div></Link>)}</div></div>
     </dialog>
     <noscript><style>{`.console-selector,.console-feature,.console-footer,.console-library-button{display:none}.console-catalog{display:block;position:relative;inset:auto;width:100%;max-height:none;border:0;background:transparent}.console-catalog header button{display:none}.console-home{min-height:100vh}.console-catalog-inner{padding:24px}`}</style></noscript>
   </main>;

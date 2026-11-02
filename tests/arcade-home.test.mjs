@@ -44,9 +44,10 @@ test('Console home: navigation, async artwork, recovery, dialog and touch', {ski
   let root=createRoot(query('#app'));
   await act(async()=>root.render(React.createElement(Home)));
   assert.equal(tabs().length,8);assert.equal(selected(),0);assert.equal(title(),'Capsa Banting');
-  assert.equal(query('.console-play').getAttribute('href'),'/big-two');
+  assert.equal(query('.console-login').getAttribute('href'),'/login?returnTo=%2F');
+  assert.equal(query('.console-play').getAttribute('href'),'/login?returnTo=%2Fbig-two');
   const routes=[...document.querySelectorAll('.console-catalog-game')].map(el=>el.getAttribute('href'));
-  assert.deepEqual(routes,['/big-two','/eldrics-workshop','/sejuta-poin','/switch-run','/tekad-jrpg','/chronicles/','/tekad-racing','/jigsaw']);
+  assert.deepEqual(routes,['/big-two','/eldrics-workshop','/sejuta-poin','/switch-run','/tekad-jrpg','/chronicles/','/tekad-racing','/jigsaw'].map(path=>`/login?returnTo=${encodeURIComponent(path)}`));
   for(const img of document.querySelectorAll('img'))await access(resolve('public'+img.getAttribute('src')));
   await key('ArrowRight');assert.equal(selected(),1);assert.equal(focused,tabs()[1]);assert.equal(tabs().filter(el=>el.getAttribute('tabindex')==='0').length,1);
   const lateWorkshop=images.at(-1);assert.ok(lateWorkshop.url.includes('/workshop/'));
@@ -54,10 +55,10 @@ test('Console home: navigation, async artwork, recovery, dialog and touch', {ski
   await key('ArrowRight');assert.equal(selected(),2);const quiz=images.at(-1);
   await act(async()=>quiz.onload());assert.ok(query('.console-backdrop.incoming').getAttribute('src').includes('/quiz/'));
   await act(async()=>staleCallback());assert.ok(query('.console-backdrop.incoming').getAttribute('src').includes('/quiz/'),'obsolete request cannot replace current art');
-  await key('End');assert.equal(selected(),7);assert.equal(query('.console-play').getAttribute('href'),'/jigsaw');
+  await key('End');assert.equal(selected(),7);assert.equal(query('.console-play').getAttribute('href'),'/login?returnTo=%2Fjigsaw');
   await key('ArrowRight');assert.equal(selected(),0);await key('ArrowLeft');assert.equal(selected(),7);await key('Home');assert.equal(selected(),0);
   await click(tabs()[6]);const racing=images.at(-1);await act(async()=>racing.onerror());
-  assert.equal(title(),'TEKAD Racing');assert.equal(query('.console-play').getAttribute('href'),'/tekad-racing','image failure does not block launch');
+  assert.equal(title(),'TEKAD Racing');assert.equal(query('.console-play').getAttribute('href'),'/login?returnTo=%2Ftekad-racing','image failure does not block launch');
   const panel=query('[role=tabpanel]');
   const touch=async(start,end)=>act(async()=>{props(panel).onTouchStart({touches:[{clientX:start[0],clientY:start[1]}]});props(panel).onTouchEnd({changedTouches:[{clientX:end[0],clientY:end[1]}]});});
   await touch([200,100],[200,250]);assert.equal(selected(),6,'vertical scrolling does not select');

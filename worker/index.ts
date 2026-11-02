@@ -1,9 +1,12 @@
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
+import { handleSso } from "../lib/sso/server";
+import type { SsoConfig } from "../lib/sso/client";
+import { isProtectedArcadePath, normalizedPath } from "../lib/sso-route-guard";
 
-interface Env {
-  ASSETS: Fetcher;
+interface Env extends SsoConfig {
+  ASSETS: { fetch(request: Request): Promise<Response> };
   DB: D1Database;
   IMAGES: {
     input(stream: ReadableStream): {
@@ -27,18 +30,26 @@ interface ExecutionContext {
 
 const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+    const authResponse = await handleSso(request, env);
+    if (authResponse) return authResponse;
+
     // Make the platform-managed D1 binding available to server route modules
     // without importing the Cloudflare-only `cloudflare:` URL in Node-based
     // artifact validation.
     (globalThis as typeof globalThis & { __TEKAD_DB__?: D1Database }).__TEKAD_DB__ = env.DB;
     const url = new URL(request.url);
+    const pathname = normalizedPath(url.pathname) ?? url.pathname;
 
     // Serve the self-contained narrative game and its assets on this Site.
-    if (url.pathname === "/chronicles") {
-      return Response.redirect(new URL("/chronicles/", url), 308);
+    if (pathname === "/chronicles") {
+      return new Response(null, { status: 308, headers: { Location: new URL('/chronicles/', url).href, 'Cache-Control': 'no-store' } });
     }
-    if (url.pathname.startsWith("/chronicles/")) {
-      return env.ASSETS.fetch(request);
+    if (pathname.startsWith("/chronicles/")) {
+      const asset = await env.ASSETS.fetch(request);
+      const response = new Response(asset.body, asset);
+      response.headers.set('Cache-Control', 'no-store');
+      response.headers.append('Vary', 'Cookie');
+      return response;
     }
 
     if (url.pathname === "/_vinext/image") {
@@ -52,7 +63,26 @@ const worker = {
       }, allowedWidths);
     }
 
-    return handler.fetch(request, env, ctx);
+    // With run_worker_first enabled, explicitly return static assets after auth.
+    if (['GET', 'HEAD'].includes(request.method) && pathname !== '/' && pathname !== '/login' && !pathname.startsWith('/api/')) {
+      const asset = await env.ASSETS.fetch(request);
+      if (asset.status !== 404) {
+        if (!isProtectedArcadePath(pathname)) return asset;
+        const response = new Response(asset.body, asset);
+        response.headers.set('Cache-Control', 'no-store');
+        response.headers.append('Vary', 'Cookie');
+        return response;
+      }
+    }
+
+    const response = await handler.fetch(request, env, ctx);
+    if (isProtectedArcadePath(url.pathname) || url.pathname === '/login' || url.pathname.startsWith('/api/')) {
+      const privateResponse = new Response(response.body, response);
+      privateResponse.headers.set('Cache-Control', 'no-store');
+      privateResponse.headers.append('Vary', 'Cookie');
+      return privateResponse;
+    }
+    return response;
   },
 };
 

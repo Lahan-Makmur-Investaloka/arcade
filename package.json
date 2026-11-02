@@ -11,9 +11,11 @@
     "build": "bash scripts/build-verified.sh",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
+    "test:sso": "node --experimental-strip-types --test tests/lahans-sso.test.mts tests/sso-route-guard.test.mts tests/safe-return-to.test.mts && node --test tests/sso-ui.test.mjs tests/sso-worker.test.mjs",
     "validate:artifact": "bash scripts/validate-artifact.sh",
     "lint": "bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "bash scripts/sites-env.sh -- drizzle-kit generate",
+    "db:sso:local": "node scripts/sso-migrate-local.mjs",
     "test:quiz": "node --test tests/quiz.test.mjs && node --experimental-strip-types --test tests/quiz-api.test.mjs"
   },
   "dependencies": {
@@ -25,6 +27,7 @@
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.37.1",
+    "@cloudflare/workers-types": "4.20260515.1",
     "@tailwindcss/postcss": "4.2.1",
     "@types/node": "22.19.19",
     "@types/react": "19.2.14",

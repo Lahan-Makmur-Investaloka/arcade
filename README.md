@@ -88,6 +88,12 @@ or enforce explicit server-side membership or allowlist checks.
 Use SIWC for account pages, user-specific dashboards, saved records, and write
 actions tied to the current ChatGPT user. Leave public content anonymous.
 
+## Lahans SSO
+
+Login Arcade now uses the external Lahans API through the Worker. Configure the server-only `SSO_API_BASE_URL`, `SSO_APP_NAME`, `SSO_APP_KEY`, and `SSO_APP_CODE` values using [the environment example](.env.example), then run `npm run db:sso:local` to prepare the local session table. See [SSO setup and deployment](docs/LAHANS_SSO.md) for production secrets, D1 migrations, session behavior, and staging acceptance work.
+
+Run `npm run test:sso` for focused authentication checks. The original frontend-only SSO design is superseded by this integration.
+
 ## Diagnostic Commands
 
 - `npm run install:ci`: perform the one bounded lockfile install
