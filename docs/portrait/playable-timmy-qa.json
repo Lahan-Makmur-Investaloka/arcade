@@ -1,0 +1,65 @@
+{
+  "name": "timmy",
+  "size": [
+    1536,
+    1024
+  ],
+  "mode": "RGBA",
+  "alpha_min": 0,
+  "alpha_max": 254,
+  "transparent_percent": 38.462702433268234,
+  "partial_percent": 61.53729756673177,
+  "opaque_percent": 0.0,
+  "vertical_divider_alpha_max": [
+    131,
+    5,
+    251,
+    251
+  ],
+  "horizontal_divider_alpha_max": 9,
+  "corners_alpha": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "cell_local_bbox_alpha_gt32": [
+    [
+      7,
+      9,
+      507,
+      505
+    ],
+    [
+      1,
+      13,
+      512,
+      505
+    ],
+    [
+      0,
+      10,
+      511,
+      504
+    ],
+    [
+      9,
+      4,
+      512,
+      498
+    ],
+    [
+      21,
+      3,
+      512,
+      498
+    ],
+    [
+      0,
+      6,
+      509,
+      498
+    ]
+  ],
+  "visual_qa": "Six states in correct row-major order. Character/costume match. Card backs patterned. True alpha present; bounds and clear-gutter constraint failed. No retries performed."
+}

@@ -1,0 +1,38 @@
+/* Shared print design: large original court illustrations, classic pip counts. */
+.b2-root .b2-card{--card-paper:#fff9e9;--card-ink:#19202b;container-type:inline-size;background:linear-gradient(125deg,#fffdf5 0%,var(--card-paper) 65%,#f4e8cf 100%);color:var(--card-ink);border:1px solid #d6c09a!important;box-shadow:0 1px 0 #fff,0 3px 0 #a98b64,0 7px 12px #0007;border-radius:5px!important;overflow:hidden}
+.b2-root .b2-card.b2-red{--card-ink:#b91031;color:var(--card-ink)}
+.b2-root .b2-card:before{inset:3px;border:1px solid #b997585e;border-radius:1px;z-index:0}
+.b2-root .b2-card-corner{left:4%;top:3%;right:auto;padding:2cqw 3cqw 3cqw;border:0;gap:0;line-height:.92;flex-direction:column;align-items:center;text-shadow:0 1px #fff9e9;z-index:3;background:#fff9e9f5;border-radius:0 0 4px 0;box-shadow:1px 1px 0 #b9975820}
+.b2-root .b2-card-corner b{font-family:'Baskerville','Palatino Linotype',Georgia,serif;font-weight:700;font-size:29cqw;letter-spacing:-.07em}
+.b2-root .b2-card-corner i{font-family:Georgia,'Times New Roman',serif;font-size:23cqw;font-style:normal;margin:2px 0 0;line-height:1}
+.b2-root .b2-corner-bottom{display:flex;inset:auto 4% 3% auto;transform:rotate(180deg)}
+.b2-root .b2-court-art{inset:2%;border:0;background:#fff9e9;overflow:hidden;border-radius:3px}
+.b2-root .b2-court-art img{display:block;position:absolute;width:114%;height:114%;max-width:none;left:-7%;top:-7%;object-fit:cover;object-position:center}
+.b2-root .b2-court-k img{width:102%;height:102%;left:-1%;top:-1%}
+.b2-pips{position:absolute;inset:16% 28%;pointer-events:none}
+.b2-body-pip{position:absolute;display:block;font-family:Georgia,'Times New Roman',serif;font-style:normal;font-size:26cqw;line-height:1;transform:translate(-50%,-50%);text-shadow:0 .6px 0 #b9975838}
+.b2-body-pip.is-inverted{transform:translate(-50%,-50%) rotate(180deg)}
+.b2-pips-9 .b2-body-pip,.b2-pips-10 .b2-body-pip{font-size:21cqw}
+.b2-root .b2-ace-art{position:absolute;inset:18% 5%;width:auto;height:auto;transform:none;font-size:0}
+.b2-ace-art img{display:block;width:100%;height:100%;object-fit:contain}
+.b2-root .b2-ace-card:before{border-color:#b99758a6;box-shadow:inset 0 0 0 2px #fff9e9,inset 0 0 0 3px #b997582b}
+.b2-root .b2-hand .b2-card.is-selected{overflow:visible;outline:2px solid #ff244d;outline-offset:2px;border-color:#fff4d4!important;box-shadow:0 3px 0 #b9aa91,0 14px 20px #0008}
+.b2-root .b2-hand .b2-card.is-selected:after{top:auto;bottom:-9px;right:calc(50% - 9px);width:18px;height:18px;border:2px solid #fff4d4;font-size:11px;line-height:1;z-index:4}
+.b2-root .b2-hand .b2-card:focus-visible{outline:3px solid #ffdc75;outline-offset:5px}
+.b2-root .b2-card[data-rank="10"] .b2-card-corner b{font-size:20cqw}
+@media(max-width:700px){
+ .b2-root .b2-hand .b2-card-corner{flex-direction:column;left:3%;right:auto;top:3%;align-items:center;gap:0;padding:2cqw 3cqw}
+ .b2-root .b2-hand .b2-card-corner b{font-size:32cqw}
+ .b2-root .b2-hand .b2-card-corner i{font-size:22cqw;margin:1px 0 0}
+ .b2-root .b2-hand .b2-corner-bottom{display:none}
+ .b2-root .b2-hand .b2-card:not(.b2-court-card) .b2-card-corner{flex-direction:row;left:7%;right:7%;top:4%;justify-content:space-between;align-items:baseline;padding:0 0 3cqw;background:none;box-shadow:none;border-bottom:1px solid #b9975859;border-radius:0}
+ .b2-root .b2-hand .b2-card:not(.b2-court-card) .b2-card-corner b{font-size:31cqw}
+ .b2-root .b2-hand .b2-card:not(.b2-court-card) .b2-card-corner i{font-size:24cqw}
+ .b2-hand .b2-pips{inset:30% 10% 9%}
+ .b2-hand .b2-body-pip{font-size:24cqw}
+ .b2-hand .b2-pips-9 .b2-body-pip,.b2-hand .b2-pips-10 .b2-body-pip{font-size:20cqw}
+ .b2-root .b2-hand .b2-ace-art{inset:26% 2% 4%}
+ .b2-root .b2-hand .b2-court-art,.b2-root .b2-pile .b2-court-art{inset:2%;border:0}
+ .b2-root .b2-pile .b2-card-corner b{font-size:27cqw}
+ .b2-root .b2-pile .b2-card-corner i{font-size:22cqw}
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "workshop-backdrop",
+    "alpha": false,
+    "prompt": "Use case: stylized-concept. Premium AAA game asset for Eldric's Workshop, cinematic stylized realistic arcane-tech inventor world. Coherent dark oxidized teal metal, aged brass, amber tungsten lighting, azure energy, meticulous detailed materials. No text, logo, UI, watermark, letters or numbers. Wide landscape 16:9 fullscreen gameplay backdrop: an atmospheric inventor workshop interior with giant arched windows at back, copper pipes, warm desk lights, restrained finely detailed background. Completely empty broad foreground workbench across lower third for game board overlay. No characters. Strong readable layered depth and calm composition."
+  },
+  {
+    "name": "workshop-cover",
+    "alpha": false,
+    "prompt": "Use case: stylized-concept. Premium AAA game asset for Eldric's Workshop, cinematic stylized realistic arcane-tech inventor world. Coherent dark oxidized teal metal, aged brass, amber tungsten lighting, azure energy, meticulous detailed materials. No text, logo, UI, watermark, letters or numbers. Wide landscape 16:9 promotional game cover: Eldric leaning over a luminous cyan energy device in his atmospheric arched-window workshop. Eldric is 23, preserve his exact identity and visible signature outfit from reference images: tousled brown hair, brown eyes, brass goggles on forehead, mustard yellow hooded inventor coat, brown leather harness, fingerless gloves and brass cyan-lit wrist machinery. Confident mischievous inventor smile. Sole character. Cinematic composition and exquisite AAA stylized realism while retaining his anime-inspired face. No other characters."
+  },
+  {
+    "name": "eldric-portrait",
+    "alpha": true,
+    "prompt": "Use case: stylized-concept. Premium AAA game asset for Eldric's Workshop, cinematic stylized realistic arcane-tech inventor world. Coherent dark oxidized teal metal, aged brass, amber tungsten lighting, azure energy, meticulous detailed materials. No text, logo, UI, watermark, letters or numbers. Transparent background character cutout, waist-up Eldric portrait, generous clear margins. 23-year-old male inventor, exact recognizable identity and signature outfit from reference images: tousled brown hair, brown eyes, brass goggles on forehead, mustard yellow hooded inventor coat, brown leather harness, fingerless gloves and brass cyan-lit wrist machinery. Confident slightly mischievous smile, facing slightly right, both hands visible, holding small brass precision tool. Whole head and hands, waist-up only, no props behind him. Premium stylized realistic rendering with anime-inspired face. Genuinely transparent alpha background."
+  },
+  {
+    "name": "scarab-generator",
+    "alpha": true,
+    "prompt": "Use case: stylized-concept. Premium AAA game asset for Eldric's Workshop, cinematic stylized realistic arcane-tech inventor world. Coherent dark oxidized teal metal, aged brass, amber tungsten lighting, azure energy, meticulous detailed materials. No text, logo, UI, watermark, letters or numbers. Square transparent-background game item cutout: compact brass mechanical scarab-like power generator with tiny folded articulated legs and a brilliant cyan crystal core, NO FACE. Three-quarter perspective, whole object centered with generous clear margins. Weighty meticulously crafted miniature machinery. No ground or backdrop. Genuine alpha."
+  },
+  {
+    "name": "gyro-orb",
+    "alpha": true,
+    "prompt": "Use case: stylized-concept. Premium AAA game asset for Eldric's Workshop, cinematic stylized realistic arcane-tech inventor world. Coherent dark oxidized teal metal, aged brass, amber tungsten lighting, azure energy, meticulous detailed materials. No text, logo, UI, watermark, letters or numbers. Square transparent-background game item cutout: hovering brass spherical gyroscope with exactly three concentric mechanical rings encircling a radiant cyan energy orb. Three-quarter perspective, whole object centered with generous clear margins. Intricate precise arcane mechanical engineering. No ground or backdrop. Genuine alpha."
+  },
+  {
+    "name": "owl-drone",
+    "alpha": true,
+    "prompt": "Use case: stylized-concept. Premium AAA game asset for Eldric's Workshop, cinematic stylized realistic arcane-tech inventor world. Coherent dark oxidized teal metal, aged brass, amber tungsten lighting, azure energy, meticulous detailed materials. No text, logo, UI, watermark, letters or numbers. Square transparent-background game item cutout: articulated mechanical brass owl drone with folded wings and illuminated cyan lens eyes. Three-quarter perspective, whole object centered with generous clear margins. Detailed interlocking brass feather armor, tiny mechanical talons, charming sophisticated silhouette. No ground or backdrop. Genuine alpha."
+  },
+  {
+    "name": "aether-reactor",
+    "alpha": true,
+    "prompt": "Use case: stylized-concept. Premium AAA game asset for Eldric's Workshop, cinematic stylized realistic arcane-tech inventor world. Coherent dark oxidized teal metal, aged brass, amber tungsten lighting, azure energy, meticulous detailed materials. No text, logo, UI, watermark, letters or numbers. Square transparent-background game item cutout: impressive floating faceted aether crystal inside a tall cylindrical brass reactor with copper coil rings and transparent glass chamber. Cyan energy glow. Three-quarter perspective, whole object centered with generous clear margins. Detailed miniature arcane machine, clear upright silhouette. No ground or backdrop. Genuine alpha."
+  },
+  {
+    "name": "workshop-metal",
+    "alpha": false,
+    "prompt": "Use case: stylized-concept. Premium AAA game asset for Eldric's Workshop, cinematic stylized realistic arcane-tech inventor world. Coherent dark oxidized teal metal, aged brass, amber tungsten lighting, azure energy, meticulous detailed materials. No text, logo, UI, watermark, letters or numbers. Square seamlessly tiling dark worn gunmetal and subtly brass-toned workshop panel material texture, fine scratches and brushed metal, flat orthographic even surface. Low contrast suitable as game board and tile material. NO objects, NO symbols, NO pictorial design, NO edge borders or frames. Even illumination."
+  }
+]

@@ -1,0 +1,16 @@
+Use case: stylized-concept.
+Asset type: production transparent PNG game character sprite atlas, EXACT 1536x1024 pixels, strict 3 columns by 2 rows, six 512x512 cells.
+References: Image 1 is the identity and costume reference for the woman to depict. Image 2 is ONLY the seated waist-up framing, rendering style, pose order, and ornate card-back reference. Do not depict the male character from image 2 or copy its colored background.
+Primary request: Make six consistent sprites of the SAME adult woman, across an implied card table, facing the viewer, rendered in rich refined detailed anime visual-novel style.
+Layout: cell origins (0,0),(512,0),(1024,0),(0,512),(512,512),(1024,512). Within EVERY cell center the character on x256; top of head around y50 and waist cutoff around y460; keep ALL hair, sleeves, hands and cards strictly between x40 and x472. Same head scale, body proportions, outfit and waist baseline in all six sprites. Ample genuinely transparent margins around each silhouette, no overlap between cells.
+Six distinct poses in reading order:
+1 top-left NORMAL: focused neutral expression holding a fan of cards near chest.
+2 top-middle CHOOSING: looking down thoughtfully, one hand withdrawing one card from the fan.
+3 top-right PLAYING: confident expression, reaching forward and downward with one card while other hand holds remaining fan.
+4 bottom-left ANXIOUS: worried, furrowed brows, holding cards close.
+5 bottom-middle SMUG: small knowing smile, holding EXACTLY THREE cards.
+6 bottom-right PASS: resigned expression, one empty hand open palm upward, other hand holds cards.
+Cards: clearly visible ornate black and ruby-red backs with fine ivory symmetrical filigree like the second reference; never plain green.
+Natural anatomically correct hands, adult faces, consistent rendering and light, no extra limbs.
+Background: true transparent alpha everywhere outside the six figures. No painted background, no colored backdrop, no table, no chair, no scenery, no ground shadow, no cell grid, no text, no pose labels, no watermark.
+Identity/costume invariants: Kirana as first reference, black twin-tail hair with gold flower ornaments and green jewel dangles, brown eyes, tailored black jacket with elaborate gold trim and gold floral fastenings, dark green lapels, white ruffled shirt, green neck bow with golden flower brooch, red jacket lining. Preserve the reference face, costume design and colors exactly, adapting only the six poses. Keep twin tails compact enough to fit each cell's safe bounds.

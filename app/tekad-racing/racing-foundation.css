@@ -1,0 +1,44 @@
+/* Stage 1: usable lifecycle shell. Final art direction ships with the 3D slice. */
+.racing-shell { font-family: Arial, Helvetica, sans-serif; }
+.racing-brand { display: inline-flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; font-size: 14px; font-weight: 700; letter-spacing: .06em; }
+.racing-brand img { border-radius: 10px; }
+.racing-title { width: min(1180px, 100%); margin: 22px auto 16px; color: #fff; font-size: clamp(24px, 4vw, 36px); letter-spacing: -.025em; }
+.racing-statusbar div span { font-size: 12px; }
+.racing-statusbar div strong, .racing-statusbar button { font-size: 14px; }
+.racing-statusbar button { min-height: 44px; }
+.racing-canvas-wrap.is-setup { min-height: 0; }
+.racing-canvas-wrap.is-setup > :not(.character-setup) { display: none; }
+.racing-canvas-wrap.is-setup .character-setup { position: relative; min-height: 400px; padding: clamp(20px, 4vw, 48px); }
+.racing-overlay.character-setup h2, .racing-paused h2 { font-family: inherit; font-size: clamp(28px, 4vw, 48px); letter-spacing: -.04em; line-height: 1.1; text-shadow: none; }
+.racing-character-select { width: min(780px, 100%); gap: 12px; }
+.racing-character-select button { padding: 12px 4px; min-height: 100px; }
+.racing-character-select .driver-portrait { width: 72px; height: 72px; }
+.racing-character-select span { font-size: 14px; }
+.racing-overlay p { font-size: 16px; line-height: 1.5; }
+.racing-overlay button { font-size: 14px; min-height: 48px; }
+.racing-overlay .racing-secondary { margin-top: 12px; background: #18253b; color: #e5edff; border: 1px solid #52617a; box-shadow: none; text-transform: none; }
+.racing-controls p { font-size: 12px; }
+.racing-control-group .brake, .racing-control-group .drift, .racing-control-group .item, .racing-control-group .special { font-size: 14px; }
+.racing-stage button:focus-visible, .racing-nav a:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+.racing-paused, .racing-overlay.finish { overflow-y: auto; place-content: safe center; }
+@media (max-width: 600px) {
+  .racing-character-select { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .racing-character-select .driver-portrait { width: 64px; height: 64px; }
+  .racing-overlay p { font-size: 14px; }
+  .racing-canvas-wrap:has(.racing-paused), .racing-canvas-wrap:has(.finish) { min-height: 360px; }
+  .racing-control-group button { min-width: 48px; }
+  .racing-control-group .drift { min-width: 84px; }
+  .racing-control-group .item, .racing-control-group .special { min-width: 64px; }
+}
+@media (max-height: 560px) and (orientation: landscape) {
+  .racing-title { display: none; }
+  .racing-stage:has(.is-setup) { display: block; height: auto; }
+  .racing-stage:has(.is-setup) .racing-controls { display: none; }
+  .racing-character-select { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .racing-canvas-wrap.is-setup .character-setup { min-height: 270px; padding: 16px; }
+  .racing-paused { padding: 12px; }
+  .racing-paused h2 { font-size: 28px; }
+  .racing-paused p { display: none; }
+  .racing-canvas-wrap:has(.racing-paused), .racing-canvas-wrap:has(.finish) { min-height: 270px; }
+}
+@media (prefers-reduced-motion: reduce) { .racing-meter.wall-hit { animation: none; } }

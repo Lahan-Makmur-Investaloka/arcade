@@ -1,0 +1,377 @@
+{
+  "stage": "3A",
+  "created": "2026-10-04",
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "id": "timmy-play",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: ORIGINAL TEKAD game character cutout. Use attached image strictly as character identity and outfit reference, create a NEW pose rather than reproducing reference. Premium detailed anime/cel illustration with subtle screenprint halftone textures; crisp expressive face, refined linework, red-black-ivory with the character's original accent colors. Preserve EXACT character age, build, face, signature hair/accessories, and clothing design/colors. Single character waist-up with bottom at hips, portrait 3:4 canvas. All hair, hands, elbows and shoulders completely inside canvas with generous transparent margin. Actual transparent background, no scenery, no halo, no typography, no letters, no logos, no watermark. Clean anatomy, two arms, five fingers per visible hand. Timmy: tousled side-parted black hair, brown eyes, black rectangular glasses, white open-collar shirt, black buttoned vest, black coat with royal-blue lining/pocket square and red edge lighting. NEW card-play action: torso twists left, right arm sweeps downward diagonally holding ONE ivory playing card with a simple black spade symbol only between thumb and index, opposite arm bent close to torso for balance. Focused confident small smile, gaze follows card. Show waist, no table.",
+      "reference": "public/big-two/timmy.webp",
+      "source_sha256": "ee095accdc9cef548bde719857aab32c3e6c4489777dcec978156386236710c8",
+      "transparent": true
+    },
+    {
+      "id": "timmy-win",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: ORIGINAL TEKAD game character cutout. Use attached image strictly as character identity and outfit reference, create a NEW pose rather than reproducing reference. Premium detailed anime/cel illustration with subtle screenprint halftone textures; crisp expressive face, refined linework, red-black-ivory with the character's original accent colors. Preserve EXACT character age, build, face, signature hair/accessories, and clothing design/colors. Single character waist-up with bottom at hips, portrait 3:4 canvas. All hair, hands, elbows and shoulders completely inside canvas with generous transparent margin. Actual transparent background, no scenery, no halo, no typography, no letters, no logos, no watermark. Clean anatomy, two arms, five fingers per visible hand. Timmy: tousled side-parted black hair, brown eyes, black rectangular glasses, white open-collar shirt, black buttoned vest, black coat with royal-blue lining/pocket square and red edge lighting. NEW victory pose: relaxed shoulders three-quarter view, left hand lightly adjusting outer glasses corner, right hand resting loosely near waist. Warm quietly delighted closed-mouth smile, eyes bright and directly engaging. No cards or props.",
+      "reference": "public/big-two/timmy.webp",
+      "source_sha256": "6acf371e40fdfd3c55f0208203bcdecd1b4498371bf64268f2bc6744e488bdba",
+      "transparent": true
+    },
+    {
+      "id": "eldric-play",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: ORIGINAL TEKAD game character cutout. Use attached image strictly as character identity and outfit reference, create a NEW pose rather than reproducing reference. Premium detailed anime/cel illustration with subtle screenprint halftone textures; crisp expressive face, refined linework, red-black-ivory with the character's original accent colors. Preserve EXACT character age, build, face, signature hair/accessories, and clothing design/colors. Single character waist-up with bottom at hips, portrait 3:4 canvas. All hair, hands, elbows and shoulders completely inside canvas with generous transparent margin. Actual transparent background, no scenery, no halo, no typography, no letters, no logos, no watermark. Clean anatomy, two arms, five fingers per visible hand. Eldric: tousled warm brown hair, amber eyes, brass goggles on forehead, mustard yellow hood lining, black steampunk coat with brass compass details/chains, ivory shirt and brown chest straps, fingerless dark gloves. NEW dynamic card-play: lean sideways forward, right elbow high and right hand pinches ONE ivory playing card with simple red diamond symbol only in a decisive diagonal downstroke across chest; left hand curls close to belt. Clever focused grin, no floating cards.",
+      "reference": "public/big-two/eldric.webp",
+      "source_sha256": "88cb94572983e45e3bfc0e004426068a8efe0b2dc49004844461a6f2e74bf1d3",
+      "transparent": true
+    },
+    {
+      "id": "eldric-win",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: ORIGINAL TEKAD game character cutout. Use attached image strictly as character identity and outfit reference, create a NEW pose rather than reproducing reference. Premium detailed anime/cel illustration with subtle screenprint halftone textures; crisp expressive face, refined linework, red-black-ivory with the character's original accent colors. Preserve EXACT character age, build, face, signature hair/accessories, and clothing design/colors. Single character waist-up with bottom at hips, portrait 3:4 canvas. All hair, hands, elbows and shoulders completely inside canvas with generous transparent margin. Actual transparent background, no scenery, no halo, no typography, no letters, no logos, no watermark. Clean anatomy, two arms, five fingers per visible hand. Eldric: tousled warm brown hair, amber eyes, brass goggles on forehead, mustard yellow hood lining, black steampunk coat with brass compass details/chains, ivory shirt and brown chest straps, fingerless dark gloves. NEW victory: head tipped slightly back with joyful open smile, left gloved fist held in a small celebratory pump beside shoulder, right relaxed hand at waist. Playful winning expression, no cards or props.",
+      "reference": "public/big-two/eldric.webp",
+      "source_sha256": "2c6c60e1d88e439d42482e10212aef798427d822862e83271f024185a9f3055f",
+      "transparent": true
+    },
+    {
+      "id": "kirana-play",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: ORIGINAL TEKAD game character cutout. Use attached image strictly as character identity and outfit reference, create a NEW pose rather than reproducing reference. Premium detailed anime/cel illustration with subtle screenprint halftone textures; crisp expressive face, refined linework, red-black-ivory with the character's original accent colors. Preserve EXACT character age, build, face, signature hair/accessories, and clothing design/colors. Single character waist-up with bottom at hips, portrait 3:4 canvas. All hair, hands, elbows and shoulders completely inside canvas with generous transparent margin. Actual transparent background, no scenery, no halo, no typography, no letters, no logos, no watermark. Clean anatomy, two arms, five fingers per visible hand. Kirana: long black twin ponytails, bangs, amber brown eyes, yellow flower hair ornaments, black and red tailored coat with green brocade lapels, cream ruffled blouse, green neck bow with yellow flower, gold floral jewelry/chains. NEW card-play pose: torso turns right with energetic sweeping ponytails, left arm bent outward playing ONE ivory card with simple black club symbol only held at fingertips, right hand near upper chest. Concentrated spirited smile, both ponytails fully visible.",
+      "reference": "public/big-two/kirana.webp",
+      "source_sha256": "2bbd3c7da6355cd3660e4d49b012b3130605e03c3191a1c63346501c66de7947",
+      "transparent": true
+    },
+    {
+      "id": "kirana-win",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: ORIGINAL TEKAD game character cutout. Use attached image strictly as character identity and outfit reference, create a NEW pose rather than reproducing reference. Premium detailed anime/cel illustration with subtle screenprint halftone textures; crisp expressive face, refined linework, red-black-ivory with the character's original accent colors. Preserve EXACT character age, build, face, signature hair/accessories, and clothing design/colors. Single character waist-up with bottom at hips, portrait 3:4 canvas. All hair, hands, elbows and shoulders completely inside canvas with generous transparent margin. Actual transparent background, no scenery, no halo, no typography, no letters, no logos, no watermark. Clean anatomy, two arms, five fingers per visible hand. Kirana: long black twin ponytails, bangs, amber brown eyes, yellow flower hair ornaments, black and red tailored coat with green brocade lapels, cream ruffled blouse, green neck bow with yellow flower, gold floral jewelry/chains. NEW victory: bright joyful laughing smile, right hand gives a small V sign beside cheek, left closed hand gently held near heart, lively tilted shoulders and airy ponytails, all fingers clearly separated. No cards or props.",
+      "reference": "public/big-two/kirana.webp",
+      "source_sha256": "5c6ff02158039d1a08ecd5686d1b681d224b9d42828ad414d9318fccbaef5a01",
+      "transparent": true
+    },
+    {
+      "id": "adelia-play",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: ORIGINAL TEKAD game character cutout. Use attached image strictly as character identity and outfit reference, create a NEW pose rather than reproducing reference. Premium detailed anime/cel illustration with subtle screenprint halftone textures; crisp expressive face, refined linework, red-black-ivory with the character's original accent colors. Preserve EXACT character age, build, face, signature hair/accessories, and clothing design/colors. Single character waist-up with bottom at hips, portrait 3:4 canvas. All hair, hands, elbows and shoulders completely inside canvas with generous transparent margin. Actual transparent background, no scenery, no halo, no typography, no letters, no logos, no watermark. Clean anatomy, two arms, five fingers per visible hand. Adelia: lavender hijab covering ALL hair and neck with brown underscarf, warm brown eyes, gentle face, long-sleeved black modest coat with lavender piping and red lining, ivory high-neck blouse, silver diamond jewelry and lavender tassels/belt drapes. Maintain full hair and neck coverage and modest sleeves exactly. NEW card-play pose: elegant three-quarter twist, left arm extends diagonally downward with ONE ivory card with simple red heart symbol only pinched cleanly between fingers, right hand poised near collarbone. Calm focused confident smile. No floating props.",
+      "reference": "public/big-two/adelia.webp",
+      "source_sha256": "9b160b8c56fba797a785e8dab327a07988573bf1f32a5701e5eba6f9d8a26801",
+      "transparent": true
+    },
+    {
+      "id": "adelia-win",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: ORIGINAL TEKAD game character cutout. Use attached image strictly as character identity and outfit reference, create a NEW pose rather than reproducing reference. Premium detailed anime/cel illustration with subtle screenprint halftone textures; crisp expressive face, refined linework, red-black-ivory with the character's original accent colors. Preserve EXACT character age, build, face, signature hair/accessories, and clothing design/colors. Single character waist-up with bottom at hips, portrait 3:4 canvas. All hair, hands, elbows and shoulders completely inside canvas with generous transparent margin. Actual transparent background, no scenery, no halo, no typography, no letters, no logos, no watermark. Clean anatomy, two arms, five fingers per visible hand. Adelia: lavender hijab covering ALL hair and neck with brown underscarf, warm brown eyes, gentle face, long-sleeved black modest coat with lavender piping and red lining, ivory high-neck blouse, silver diamond jewelry and lavender tassels/belt drapes. Maintain full hair and neck coverage and modest sleeves exactly. NEW victory: softly closed happy eyes and luminous warm smile, right hand resting over heart, left hand gently open beside waist in gracious acknowledgement. Elegant slight bow of head, no cards or props.",
+      "reference": "public/big-two/adelia.webp",
+      "source_sha256": "a8b94b3126f752855bb4b264ca02eec197bf13a5d11db6907b6ffafdd9d25268",
+      "transparent": true
+    },
+    {
+      "id": "dylan-play",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: ORIGINAL TEKAD game character cutout. Use attached image strictly as character identity and outfit reference, create a NEW pose rather than reproducing reference. Premium detailed anime/cel illustration with subtle screenprint halftone textures; crisp expressive face, refined linework, red-black-ivory with the character's original accent colors. Preserve EXACT character age, build, face, signature hair/accessories, and clothing design/colors. Single character waist-up with bottom at hips, portrait 3:4 canvas. All hair, hands, elbows and shoulders completely inside canvas with generous transparent margin. Actual transparent background, no scenery, no halo, no typography, no letters, no logos, no watermark. Clean anatomy, two arms, five fingers per visible hand. Dylan: tall vivid red spiky hair, sharp reddish brown eyes, strong athletic build, red and black studded leather jacket with metal zips over black crew-neck shirt, black wristbands and belt. NEW intense card-play: torso angles strongly left, right forearm crosses torso in a decisive lateral card throw preparation while holding ONE ivory card with simple red diamond symbol only, left hand clenched loosely below chest. Fierce focused confident grin, no floating cards.",
+      "reference": "public/big-two/dylan.webp",
+      "source_sha256": "c813f054e8994a59473e021e5ae4cfa450588ff9f03fd84e4f8efc7e02017d10",
+      "transparent": true
+    },
+    {
+      "id": "dylan-win",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: ORIGINAL TEKAD game character cutout. Use attached image strictly as character identity and outfit reference, create a NEW pose rather than reproducing reference. Premium detailed anime/cel illustration with subtle screenprint halftone textures; crisp expressive face, refined linework, red-black-ivory with the character's original accent colors. Preserve EXACT character age, build, face, signature hair/accessories, and clothing design/colors. Single character waist-up with bottom at hips, portrait 3:4 canvas. All hair, hands, elbows and shoulders completely inside canvas with generous transparent margin. Actual transparent background, no scenery, no halo, no typography, no letters, no logos, no watermark. Clean anatomy, two arms, five fingers per visible hand. Dylan: tall vivid red spiky hair, sharp reddish brown eyes, strong athletic build, red and black studded leather jacket with metal zips over black crew-neck shirt, black wristbands and belt. NEW victory: broad warm toothy triumphant grin, left arm bent with fist raised just above shoulder, right thumb hooks casually near belt. Head tilted slightly sideways, confident friendly energy, no cards or props.",
+      "reference": "public/big-two/dylan.webp",
+      "source_sha256": "bd936cbf181cc15eb42b6bda502b47514e700f4b444d77db42007ee0d4a267e2",
+      "transparent": true
+    },
+    {
+      "id": "court-jack-eldric",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Generate a new original court-card CENTER ILLUSTRATION, portrait 2:3 canvas. References: first image Eldric identity and clothing, second image shared illustration style. Eldric: recognizable young man with tousled warm brown hair, brown eyes, cheerful clever expression, gold hood on black urban tailored adventure jacket. Agile urban JACK pose, waist-up compact readable silhouette, one hand holding ONE completely blank ivory playing card angled gracefully beside his chest. Elegant detailed red/black/ivory screenprint cel-shaded anime illustration; retain muted gold hood accent. Face prominent and readable at small card scale, centered in canvas with generous ivory negative margins and flat warm ivory backing. This is art to place inside a card, NOT a complete card. No letters, numbers, suit symbols, frame, borders, text, crowns, logos, watermarks, or franchise characters anywhere. Do not repeat reference playing card markings. Natural hand anatomy, polished original illustration.",
+      "source_sha256": "3eaf6f71fdb96fcb7c3abce4d27d7ed0a489e3206f628eadf874b14f92d8eadf",
+      "transparent": false
+    },
+    {
+      "id": "court-queen-adelia",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Generate a new original court-card CENTER ILLUSTRATION, portrait 2:3 canvas. References: first image Adelia identity and clothing, second image shared illustration style. Adelia: recognizable young woman with warm brown eyes and gentle confident strategic expression, lavender hijab fully covering ALL hair and neck, modest black and violet tailored jacket over ivory high neckline. Poised strategic QUEEN pose, waist-up compact readable silhouette, holding a small elegant fan of completely BLANK ivory playing cards at her chest. Elegant detailed red/black/ivory screenprint cel-shaded anime illustration; retain lavender hijab and violet accents. Face prominent and readable at small card scale, centered with generous ivory negative margins and flat warm ivory backing. This is art to place inside a card, NOT a complete card. No letters, numbers, suit symbols, frame, borders, text, crowns, logos, watermarks, or franchise characters anywhere. Do not repeat reference playing card markings. Natural hand anatomy, polished original illustration.",
+      "source_sha256": "4003976c751d4f6440efae64672b99350eda8bd23b3724b366ed31a29a27a50a",
+      "transparent": false
+    },
+    {
+      "id": "court-king-timmy",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Generate a new original court-card CENTER ILLUSTRATION, portrait 2:3 canvas. References: first image Timmy identity and clothing, second image shared illustration style. Timmy: recognizable young man with neatly side-parted black hair, brown eyes, black rectangular glasses and composed intelligent expression, black and deep blue tailored urban jacket, ivory shirt. Composed strategist KING pose, waist-up compact readable silhouette, one hand lightly adjusting glasses while the other holds ONE completely BLANK ivory playing card close to chest. Elegant detailed red/black/ivory screenprint cel-shaded anime illustration; retain deep blue accent. Face prominent and readable at small card scale, centered with generous ivory negative margins and flat warm ivory backing. This is art to place inside a card, NOT a complete card. No letters, numbers, suit symbols, frame, borders, text, crowns, logos, watermarks, or franchise characters anywhere. Do not repeat reference playing card markings. Natural hand anatomy, polished original illustration.",
+      "source_sha256": "4091536ae27d22823459dd311363ad1388ce46efce979b7b430d6449cbd4a2e2",
+      "transparent": false
+    },
+    {
+      "id": "deck-back",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: premium playing-card BACK artwork, portrait 2:3 canvas, completely flat print master with no perspective or mockup. Intricate original abstract angular scarlet/black/ivory guilloche and elegant screenprint ornament. Central original abstract suit rosette made from interlocking sharp petals, surrounding crisply defined ornamental linework. EXACT 180-degree rotational symmetry: every shape at the top repeated rotated at the bottom, center at exact canvas center; no directional lighting or directional grunge, all elements balanced two-way. Edge safe warm ivory border uniform on all four sides. Premium original collectible deck aesthetic, controlled halftone texture, bold red-black contrast readable at tiny gameplay sizes, intricate fine details on closer view. No words, letters, numbers, logos, people, faces, characters, watermarks. Entire image is just one card back design filling the portrait canvas.",
+      "source_sha256": "45fca44020e5702257b17043f65060e9ae2c08d32771376f2cdd94603133636c",
+      "transparent": false
+    },
+    {
+      "id": "table-felt",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: game card table surface environment texture, LANDSCAPE 3:2 canvas. Reference image is style inspiration only: match its premium illustrated cel-shaded anime and understated screenprint finish; no characters or cards from reference. Flat directly overhead orthographic camera, rectangular broad dark OXBLOOD FELT playing surface covering most of canvas, large quiet completely EMPTY center, subtle refined felt texture with extremely low contrast so gameplay cards and text remain readable. At extreme perimeter only: refined black leather outer edge, neat ivory stitching, restrained thin scarlet angular inlay. Elegant premium card-game table environment. Uniform balanced flat illumination without hotspots. NO cards, NO people, NO props, NO chips, NO text, NO symbols, NO logos, NO UI, NO perspective, NO room, NO furniture legs. The entire output is a single clean overhead table texture with broad empty center and restrained perimeter details.",
+      "source_sha256": "8241ae3b8b3e11953ca558c01b4ef8fbfdb8ea4636dc641fcd439a8a2d9c60c6",
+      "transparent": false
+    }
+  ],
+  "exports": [
+    {
+      "file": "public/big-two/art/adelia-play-240.webp",
+      "width": 240,
+      "height": 319,
+      "bytes": 26070,
+      "sha256": "2d9e99a4d6c01a8da7e52265139d70594c898d6bc300d5c6702402b7eb9e0ddd"
+    },
+    {
+      "file": "public/big-two/art/adelia-play-480.webp",
+      "width": 480,
+      "height": 639,
+      "bytes": 78868,
+      "sha256": "64751c049e0695ba6a63c620d321fe2231929edc8d95423912819f36b193ce51"
+    },
+    {
+      "file": "public/big-two/art/adelia-play.webp",
+      "width": 768,
+      "height": 1022,
+      "bytes": 190458,
+      "sha256": "e928075d19912a79183b5abba11af6f403bfc9493620d08f3762484d0dc1f7b3"
+    },
+    {
+      "file": "public/big-two/art/adelia-win-240.webp",
+      "width": 240,
+      "height": 319,
+      "bytes": 26590,
+      "sha256": "058e77ad70c667b5067ff40c04f0b630b4d2daf16416defba8873a6d371d0c4d"
+    },
+    {
+      "file": "public/big-two/art/adelia-win-480.webp",
+      "width": 480,
+      "height": 639,
+      "bytes": 82352,
+      "sha256": "c387fd972eab5bfa0946b31285cad72ad97ba9f5e10326fe3455725b43c6d881"
+    },
+    {
+      "file": "public/big-two/art/adelia-win.webp",
+      "width": 768,
+      "height": 1022,
+      "bytes": 201600,
+      "sha256": "d6ec026a25d87ff3f7dd22b10431fb607a5b8499d44aba46123eae8a07a3dabd"
+    },
+    {
+      "file": "public/big-two/art/court-j.webp",
+      "width": 384,
+      "height": 576,
+      "bytes": 76836,
+      "sha256": "3ea21f0bd0ed25bd1802c4fb3662309774a7b2203310c48daf6247e56eabd964"
+    },
+    {
+      "file": "public/big-two/art/court-k.webp",
+      "width": 384,
+      "height": 576,
+      "bytes": 54740,
+      "sha256": "defd68efab964570e28ff9bf7aad7f27c8d000a951e1cfb0ffd694b21f0cf429"
+    },
+    {
+      "file": "public/big-two/art/court-q.webp",
+      "width": 384,
+      "height": 576,
+      "bytes": 68692,
+      "sha256": "09497c77dde1483b9c0a262e1a6602186db167c35088472487c2ff7b42bf2707"
+    },
+    {
+      "file": "public/big-two/art/deck-back.webp",
+      "width": 256,
+      "height": 384,
+      "bytes": 54644,
+      "sha256": "4e1dc703c449315299191a884ac1beda48a2dee8814a978c41a3a6492e5ebdd2"
+    },
+    {
+      "file": "public/big-two/art/dylan-play-240.webp",
+      "width": 240,
+      "height": 319,
+      "bytes": 31596,
+      "sha256": "7b7d4ec8257282166735aa53f77e577f31ce6f0bc1dfa1e3c19adcb8e30301d9"
+    },
+    {
+      "file": "public/big-two/art/dylan-play-480.webp",
+      "width": 480,
+      "height": 639,
+      "bytes": 100164,
+      "sha256": "d25738669d2a549aaf96e1b7dddb476e9f0f554393324521e2607137529528f8"
+    },
+    {
+      "file": "public/big-two/art/dylan-play.webp",
+      "width": 768,
+      "height": 1022,
+      "bytes": 244548,
+      "sha256": "f8f7f95dc954efd17ac03cf4db6f02c1682072edf268125fa7f39bae2b5587fe"
+    },
+    {
+      "file": "public/big-two/art/dylan-win-240.webp",
+      "width": 240,
+      "height": 319,
+      "bytes": 31812,
+      "sha256": "e250fd5c5d7631e887786a3b068a4eaedf9f0af1851a920875fd9523c92a590a"
+    },
+    {
+      "file": "public/big-two/art/dylan-win-480.webp",
+      "width": 480,
+      "height": 639,
+      "bytes": 96930,
+      "sha256": "829961d7dc17b325d6943fd6803f41d56661ca2342c74d190788b0de4dde8251"
+    },
+    {
+      "file": "public/big-two/art/dylan-win.webp",
+      "width": 768,
+      "height": 1022,
+      "bytes": 233986,
+      "sha256": "7709df4a1cea76b11e4d3c6211e51d505e80e3035dc19b547b9d2ed77b50d9db"
+    },
+    {
+      "file": "public/big-two/art/eldric-play-240.webp",
+      "width": 240,
+      "height": 319,
+      "bytes": 36750,
+      "sha256": "eb8f3d39da13a010687c0f6716bff86a2e2f59777f65fd4695cf7d51b303db14"
+    },
+    {
+      "file": "public/big-two/art/eldric-play-480.webp",
+      "width": 480,
+      "height": 639,
+      "bytes": 120720,
+      "sha256": "486096194f6b67f983d8d263466e01dc10bc72a3f5661d4b0971bfeefed12d0f"
+    },
+    {
+      "file": "public/big-two/art/eldric-play.webp",
+      "width": 768,
+      "height": 1022,
+      "bytes": 282184,
+      "sha256": "4b8000838b0add61305d731cefc52a29e76a5362447ad890dfc5dc1d063cbbae"
+    },
+    {
+      "file": "public/big-two/art/eldric-win-240.webp",
+      "width": 240,
+      "height": 319,
+      "bytes": 35228,
+      "sha256": "df4fe69668114a37ed5ddc731454615e9a2e1ed03767fab8409d113cf7808b99"
+    },
+    {
+      "file": "public/big-two/art/eldric-win-480.webp",
+      "width": 480,
+      "height": 639,
+      "bytes": 113376,
+      "sha256": "6935811c22952c0822fba24af1692b007511fa080c1400e6b24eaee303d4f2e0"
+    },
+    {
+      "file": "public/big-two/art/eldric-win.webp",
+      "width": 768,
+      "height": 1022,
+      "bytes": 264384,
+      "sha256": "a05f9dfc085de26d15604bcd46442720de0abba171ba91f99fda37c7655c93f9"
+    },
+    {
+      "file": "public/big-two/art/kirana-play-240.webp",
+      "width": 240,
+      "height": 320,
+      "bytes": 41796,
+      "sha256": "c34882bde647feda0a92b684d223fbc9d5694905efede935440b62e895b38c84"
+    },
+    {
+      "file": "public/big-two/art/kirana-play-480.webp",
+      "width": 480,
+      "height": 640,
+      "bytes": 133298,
+      "sha256": "219bf9ddec9b04b51ef459981db5d762b8d4d784fac3a8637ab8944af9d185df"
+    },
+    {
+      "file": "public/big-two/art/kirana-play.webp",
+      "width": 768,
+      "height": 1024,
+      "bytes": 307138,
+      "sha256": "805862207cecab11d664e8ea1ed5334d1f4678a6f616f89a3b9cafba33f3dbe7"
+    },
+    {
+      "file": "public/big-two/art/kirana-win-240.webp",
+      "width": 240,
+      "height": 319,
+      "bytes": 43822,
+      "sha256": "a8179f08cbacdf53a37803462c52f5421fac94318a1d5fa632305a4b23188866"
+    },
+    {
+      "file": "public/big-two/art/kirana-win-480.webp",
+      "width": 480,
+      "height": 639,
+      "bytes": 143716,
+      "sha256": "2e39d0acfb7bea8c55cc079b7679b267c6122175ec83db61957eeb7c52fff389"
+    },
+    {
+      "file": "public/big-two/art/kirana-win.webp",
+      "width": 768,
+      "height": 1022,
+      "bytes": 333272,
+      "sha256": "112961dbe90e586350a12a1b3e84ab98e38884c1e34e1bc88894de6bd4af53ee"
+    },
+    {
+      "file": "public/big-two/art/table-felt.webp",
+      "width": 1200,
+      "height": 800,
+      "bytes": 120158,
+      "sha256": "1ebb8c060c0921802aba66e07927eeea5c31185c09fa1b9240c2f87aa6f7338d"
+    },
+    {
+      "file": "public/big-two/art/timmy-play-240.webp",
+      "width": 240,
+      "height": 319,
+      "bytes": 26638,
+      "sha256": "9d2719201c2cb7696daf20a12b0619a80cbe5ac907fcb52d0a839a07fb97fcfd"
+    },
+    {
+      "file": "public/big-two/art/timmy-play-480.webp",
+      "width": 480,
+      "height": 639,
+      "bytes": 79534,
+      "sha256": "25a3461782588d22a0378704cb1b2ed3a0a3246a474ac266c20b5e1ea0f76527"
+    },
+    {
+      "file": "public/big-two/art/timmy-play.webp",
+      "width": 768,
+      "height": 1022,
+      "bytes": 191972,
+      "sha256": "bb92b7720f6e66376a9763b89c03718c2e7a9956885b5a19953ffaca6125bdec"
+    },
+    {
+      "file": "public/big-two/art/timmy-win-240.webp",
+      "width": 240,
+      "height": 320,
+      "bytes": 28022,
+      "sha256": "b52cd908403ecbe392b2bc3ff854db7494476fd396b5fad87f25b253f33ba3d3"
+    },
+    {
+      "file": "public/big-two/art/timmy-win-480.webp",
+      "width": 480,
+      "height": 640,
+      "bytes": 83180,
+      "sha256": "f4892ad91af8069d06531bc3d4a83325fc17873a210c923c9cd83a92f5304565"
+    },
+    {
+      "file": "public/big-two/art/timmy-win.webp",
+      "width": 768,
+      "height": 1024,
+      "bytes": 201554,
+      "sha256": "fc8f1f6bf8e4763344afadc0e8bc6422cbe3e777c1f7eae8798017dcc6153796"
+    }
+  ],
+  "total_export_bytes": 4186628,
+  "notes": [
+    "Original character references and group cover preserved.",
+    "Only downscaling and WebP encoding applied; alpha retained.",
+    "Character framing is intentionally contained; some generated coat and hair tips touch canvas edges.",
+    "Card backs visually two-way; all hidden cards use the same artwork.",
+    "Exact rank and suit indices are rendered in HTML, independent of the illustrations."
+  ]
+}

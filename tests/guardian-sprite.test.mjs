@@ -1,0 +1,23 @@
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+import ts from 'typescript';
+const source=readFileSync('app/tekad-jrpg/guardian-sprite.tsx','utf8').split('export default function')[0].replace(/^import .*$/mg,'');
+const js=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.ESNext}}).outputText;
+const {guardianPose,ENEMY_IMPACT_MS}=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
+assert.equal(ENEMY_IMPACT_MS,1620);
+let b={phase:'enemy',round:3,enemyDamage:48};
+assert.equal(guardianPose(b,0).sheet,'reactions');
+assert.deepEqual(guardianPose(b,1100),{sheet:'attacks',row:2,frame:1});
+assert.equal(guardianPose({...b,broken:true},1100).sheet,'reactions');
+assert.equal(guardianPose({...b,round:2},1000).effect,3);
+assert.equal(guardianPose({phase:'enemyRecovery',round:3,heroDamage:96},0).effect,1);
+assert.equal(guardianPose({phase:'enemyRecovery',round:1,heroDamage:34},0).effect,0);
+assert.deepEqual(guardianPose({phase:'won'},9999),{sheet:'reactions',row:3,frame:3});
+console.log('Guardian timeline checks passed: windup, impact, break cancellation, charge, VFX and defeat.');
+assert.deepEqual(guardianPose({phase:'player',breakRecovery:true},5000),{sheet:'reactions',row:1,frame:3});
+assert.equal(guardianPose({phase:'player',charged:true},5000).effect,3);
+assert.equal(guardianPose({phase:'player'},5000).frame,0);
+console.log('Held break pose, ready aura and restrained idle passed.');
+
+assert.equal(guardianPose({phase:'player',broken:true,breakRecovery:false},0).frame,3);
+assert.equal(guardianPose({phase:'party',broken:true,lastActor:'timmy',lastAction:'bash'},540).frame,3);

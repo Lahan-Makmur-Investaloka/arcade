@@ -1,0 +1,39 @@
+{
+  "generation": {
+    "mode": "built-in image_gen",
+    "assets": [
+      {
+        "name": "eldric",
+        "prompt": "Use case: identity-preserve. Asset type: original TEKAD Big Two court-card bust illustration readable at 40x55 pixels. Input image is a character-identity reference only. Completely redesign its busy illustration as one clean, highly readable contemporary engraved/cel ink portrait. Portrait 2:3 canvas. Flat solid warm ivory #fffaf0 background. Large face upper-middle, head and shoulders only; shoulders occupy lower portion. Full hair or head covering visible with generous 10 percent top margin. Frontal or very slight three-quarter view, upright calm pose. Bold dark contours, broad flat shapes, very sparse engraving marks, no fine noisy shading. Limited black and ivory with character accent and tiny scarlet detail. Restrained simple black jacket with ivory collar. No hands, objects, playing cards, suits, symbols, text, numbers, border, frame, crown, jewelry, background decor, or elaborate costume. Keep single character, original facial identity and cheerful confident expression. Subject: Eldric, youthful male Jack; warm brown eyes, tousled brown hair, yellow/brass goggles resting on hair, golden-yellow jacket accent. Simplify goggles to clear two-lens silhouette. Preserve tousled full hair. No flying strands near image edges."
+      },
+      {
+        "name": "adelia",
+        "prompt": "Use case: identity-preserve. Asset type: original TEKAD Big Two court-card bust illustration readable at 40x55 pixels. Input image is a character-identity reference only. Completely redesign its busy illustration as one clean, highly readable contemporary engraved/cel ink portrait. Portrait 2:3 canvas. Flat solid warm ivory #fffaf0 background. Large face upper-middle, head and shoulders only; shoulders occupy lower portion. Full hair or head covering visible with generous 10 percent top margin. Frontal or very slight three-quarter view, upright calm pose. Bold dark contours, broad flat shapes, very sparse engraving marks, no fine noisy shading. Limited black and ivory with character accent and tiny scarlet detail. Restrained simple black jacket with ivory collar. No hands, objects, playing cards, suits, symbols, text, numbers, border, frame, crown, jewelry, background decor, or elaborate costume. Keep single character, original facial identity and cheerful confident expression. Subject: Adelia, youthful female Queen; warm brown eyes, gentle confident smile, lavender hijab neatly framing her face and draping simply over shoulders. Preserve modest lavender hijab and original face. Hijab fully visible, elegant clean fold shapes."
+      },
+      {
+        "name": "timmy",
+        "prompt": "Use case: identity-preserve. Asset type: original TEKAD Big Two court-card bust illustration readable at 40x55 pixels. Input image is a character-identity reference only. Completely redesign its busy illustration as one clean, highly readable contemporary engraved/cel ink portrait. Portrait 2:3 canvas. Flat solid warm ivory #fffaf0 background. Large face upper-middle, head and shoulders only; shoulders occupy lower portion. Full hair or head covering visible with generous 10 percent top margin. Frontal or very slight three-quarter view, upright calm pose. Bold dark contours, broad flat shapes, very sparse engraving marks, no fine noisy shading. Limited black and ivory with character accent and tiny scarlet detail. Restrained simple black jacket with ivory collar. No hands, objects, playing cards, suits, symbols, text, numbers, border, frame, crown, jewelry, background decor, or elaborate costume. Keep single character, original facial identity and cheerful confident expression. Subject: Timmy, youthful male King; swept black hair, rectangular black glasses, brown eyes, knowing friendly smile, simple royal-blue lapel accent. Glasses clear and readable. Entire hairstyle visible. No crown."
+      }
+    ]
+  },
+  "exports": [
+    {
+      "path": "public/big-two/art/court-j-v2.webp",
+      "size_bytes": 49238,
+      "sha256": "58b928b34ed1572455b965ecad2d62424ad1eba7a91e829b205a7661d954259c",
+      "source_sha256": "5e08302b754c040b49aad6cfa4df57606e1f8813b2c068c37cadf255bcfc900a"
+    },
+    {
+      "path": "public/big-two/art/court-q-v2.webp",
+      "size_bytes": 27892,
+      "sha256": "435ce1152c796e513f1ee01785cbb67b0399bd0aa92fdae7be9da3eb8b0fd72c",
+      "source_sha256": "051c7579f188961bd72c175574002e2fcbbfc1c696c4d9edbf5d898ec8165918"
+    },
+    {
+      "path": "public/big-two/art/court-k-v2.webp",
+      "size_bytes": 35348,
+      "sha256": "39b70c9323b92023001e3f50af210c8730a2f874f539d0d016c605984f0cb7ad",
+      "source_sha256": "c596a853f3c7c0d9acb5febf8f71e0688c99329273d18d2b5b341d657c8cdb49"
+    }
+  ]
+}

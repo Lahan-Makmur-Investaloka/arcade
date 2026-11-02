@@ -1,0 +1,50 @@
+{
+  "method": "built-in imagegen",
+  "prompts": {
+    "mode": "built-in image_gen",
+    "jobs": [
+      {
+        "key": "eldric-jack",
+        "ref": "eldric",
+        "subject": "JACK / Eldric identity: young man with tousled brown hair and round inventor goggles perched on head, golden goggle rims. Angular crimson black and antique-gold invented royal tunic, geometric gear-pattern sash, holding a slender compass-gear staff. Brown hair and goggles unmistakable. Moderate narrow angular shoulders, dynamic diagonal interwoven ornament.",
+        "prompt": "Use case: stylized-concept. Asset type: premium original playing-card court inset panel for TEKAD Big Two. Create a portrait 2:3 illustration, 1024x1536 preferred. This is the court artwork ONLY, no outer card or frame. A genuine bespoke classic two-headed reversible court figure with exact 180-degree rotational composition: an upright bust in upper half and its identical upside-down counterpart in lower half, joined seamlessly at the waist by one ornamental interlocking sash. Heads sit in upper and lower thirds; keep every head, hand and ornament within an 8% safe margin on all four sides. Entire silhouette legible and balanced. Classic geometric engraved playing-card line art, bold clean black outlines and flat enamel ink areas. Restrained internal hatching only. Warm ivory negative space, black, crimson and antique gold palette with subtle identity accent. Highly graphic original ornamental textile shapes integrated into the coat and sash. Premium memorable rank silhouette. Reference is ONLY for character identity cues; completely redesign in authentic flat traditional court-card visual language, small mature graphic facial features. Do not copy anime styling or pose. No portrait sticker, photo rectangle, scene, poster, shading, gradients, texture distress, cards being held, typography, numbers, letters, suit symbols, watermark, or border.\nSubject: JACK / Eldric identity: young man with tousled brown hair and round inventor goggles perched on head, golden goggle rims. Angular crimson black and antique-gold invented royal tunic, geometric gear-pattern sash, holding a slender compass-gear staff. Brown hair and goggles unmistakable. Moderate narrow angular shoulders, dynamic diagonal interwoven ornament."
+      },
+      {
+        "key": "adelia-queen",
+        "ref": "adelia",
+        "subject": "QUEEN / Adelia identity: woman wearing lavender hijab that fully covers hair and neck, modest high-necked royal outfit, serene face. One stylized crimson blossom held on a geometric slender stem. Lavender only subtle in hijab panels, black crimson and gold patterned gown. Distinctive flowing scalloped shoulder contour and blossom-pattern interlocking sash. No crown required; preserve hijab identity.",
+        "prompt": "Use case: stylized-concept. Asset type: premium original playing-card court inset panel for TEKAD Big Two. Create a portrait 2:3 illustration, 1024x1536 preferred. This is the court artwork ONLY, no outer card or frame. A genuine bespoke classic two-headed reversible court figure with exact 180-degree rotational composition: an upright bust in upper half and its identical upside-down counterpart in lower half, joined seamlessly at the waist by one ornamental interlocking sash. Heads sit in upper and lower thirds; keep every head, hand and ornament within an 8% safe margin on all four sides. Entire silhouette legible and balanced. Classic geometric engraved playing-card line art, bold clean black outlines and flat enamel ink areas. Restrained internal hatching only. Warm ivory negative space, black, crimson and antique gold palette with subtle identity accent. Highly graphic original ornamental textile shapes integrated into the coat and sash. Premium memorable rank silhouette. Reference is ONLY for character identity cues; completely redesign in authentic flat traditional court-card visual language, small mature graphic facial features. Do not copy anime styling or pose. No portrait sticker, photo rectangle, scene, poster, shading, gradients, texture distress, cards being held, typography, numbers, letters, suit symbols, watermark, or border.\nSubject: QUEEN / Adelia identity: woman wearing lavender hijab that fully covers hair and neck, modest high-necked royal outfit, serene face. One stylized crimson blossom held on a geometric slender stem. Lavender only subtle in hijab panels, black crimson and gold patterned gown. Distinctive flowing scalloped shoulder contour and blossom-pattern interlocking sash. No crown required; preserve hijab identity."
+      },
+      {
+        "key": "timmy-king",
+        "ref": "timmy",
+        "subject": "KING / Timmy identity: man with swept black hair and thin black rectangular eyeglasses, composed face. Structured royal coat with broad squared ceremonial shoulders, restrained cobalt-blue accent stripes, crimson black and gold. Holds a strong geometric gold scepter. Distinctive broad authoritative symmetrical silhouette and chevron-pattern interlocking sash.",
+        "prompt": "Use case: stylized-concept. Asset type: premium original playing-card court inset panel for TEKAD Big Two. Create a portrait 2:3 illustration, 1024x1536 preferred. This is the court artwork ONLY, no outer card or frame. A genuine bespoke classic two-headed reversible court figure with exact 180-degree rotational composition: an upright bust in upper half and its identical upside-down counterpart in lower half, joined seamlessly at the waist by one ornamental interlocking sash. Heads sit in upper and lower thirds; keep every head, hand and ornament within an 8% safe margin on all four sides. Entire silhouette legible and balanced. Classic geometric engraved playing-card line art, bold clean black outlines and flat enamel ink areas. Restrained internal hatching only. Warm ivory negative space, black, crimson and antique gold palette with subtle identity accent. Highly graphic original ornamental textile shapes integrated into the coat and sash. Premium memorable rank silhouette. Reference is ONLY for character identity cues; completely redesign in authentic flat traditional court-card visual language, small mature graphic facial features. Do not copy anime styling or pose. No portrait sticker, photo rectangle, scene, poster, shading, gradients, texture distress, cards being held, typography, numbers, letters, suit symbols, watermark, or border.\nSubject: KING / Timmy identity: man with swept black hair and thin black rectangular eyeglasses, composed face. Structured royal coat with broad squared ceremonial shoulders, restrained cobalt-blue accent stripes, crimson black and gold. Holds a strong geometric gold scepter. Distinctive broad authoritative symmetrical silhouette and chevron-pattern interlocking sash."
+      }
+    ]
+  },
+  "refinements": {
+    "jack-queen-refinement-prompt.txt": "Change only composition spacing of this original two-headed reversible playing-card court artwork: reduce the complete double-ended illustration uniformly to 84 percent of current size centered on the same 2:3 portrait canvas, filling extra space with the same warm ivory background. Every hair tip, hijab edge, staff, blossom, sleeve and ornament must stay at least 8% away from every canvas edge. Keep both complete heads, all facial identities, clothes, ornaments, line art and colors exactly unchanged. No crop, no added symbols, no text, no frame.\n",
+    "timmy-refinement-prompt.txt": "Edit this original two-headed court panel only. Preserve both Timmy faces, hair, eyeglasses, matching gold crowns, royal shoulder silhouette, scepters, all colors, and seamless double-ended waist structure. Replace every black spade-shaped suit emblem on the white shoulder and sleeve strips with a small simple black four-point star ornament. Replace every diamond-shaped red jewel on crowns and scepters with a round red circular gemstone. Absolutely no playing-card suit symbols anywhere. Scale the entire figure down within the same portrait 2:3 canvas enough to leave a clean warm ivory margin of at least 8 percent on every side; both crown tips must be fully within safe margin. Keep the existing flat graphic artwork, no text, no outer card border. Output full edited portrait.\n"
+  },
+  "exports": [
+    {
+      "path": "public/big-two/art/court-j-engraved.webp",
+      "bytes": 53750,
+      "sha256": "f84d81fd8f860ec68dcf8484f4318bcbf2b0bdc879e61cde58b5c8ea7dbe9b4e",
+      "source_sha256": "7b2068eaef4b575812c9301938a03c46f90c936e00c9aa1f5e3576fcefa6bf97"
+    },
+    {
+      "path": "public/big-two/art/court-q-engraved.webp",
+      "bytes": 49178,
+      "sha256": "5e45c2c5e8aab804dccbdbebef0002ca9c1baecefd819f4395520f42b121aae4",
+      "source_sha256": "82b5b3a3a320574f32f33faa8ff8a75d053685b44e43778f180bd4a65f97c3b5"
+    },
+    {
+      "path": "public/big-two/art/court-k-engraved.webp",
+      "bytes": 61508,
+      "sha256": "db031cbce5108cec390679cf7a596908fff81f7ab3fc4060f4f3acf7801f0b89",
+      "source_sha256": "e0ac4e4bfd9dc869010401585afba0d23e9629a9a99d42cf135b8966668e1115"
+    }
+  ]
+}

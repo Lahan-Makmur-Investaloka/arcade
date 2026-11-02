@@ -1,0 +1,23 @@
+.b2-clearing-pile{position:fixed!important;z-index:4;pointer-events:none;margin:0!important;transform-origin:center;will-change:transform,opacity}
+.b2-playing .b2-opponent{transition:border-color .2s,box-shadow .2s}
+/* All spatial motion uses real element geometry, and only committed public cards. */
+.b2-motion .b2-pile .b2-card{animation:none}
+.b2-playing .b2-table:has([data-flight]){z-index:3}
+.b2-pile [data-flight]{position:relative;z-index:4;pointer-events:none;will-change:transform;transform-origin:top left}
+.b2-playing .b2-deal-flight i{position:fixed;left:0;top:0;width:46px;height:64px;opacity:0;pointer-events:none;z-index:7;animation:none!important;transform:none;border-radius:4px}
+.b2-motion .b2-hand-dealing .b2-card{animation:b2-hand-arrive .32s calc(300ms + var(--i)*55ms) cubic-bezier(.2,.8,.2,1) both}
+.b2-motion .b2-deck{animation:b2-deck-ready .28s ease-out both}
+.b2-motion .b2-result-card{animation:b2-result-arrive .42s cubic-bezier(.16,.8,.2,1) both}
+.b2-motion .b2-result-art .b2-character-art{animation:b2-winner-arrive .55s .1s cubic-bezier(.2,.8,.2,1) both}
+.b2-motion .b2-scoreboard>div{animation:b2-score-arrive .24s ease-out both}
+.b2-motion .b2-scoreboard>div:nth-child(1){animation-delay:.2s}.b2-motion .b2-scoreboard>div:nth-child(2){animation-delay:.28s}.b2-motion .b2-scoreboard>div:nth-child(3){animation-delay:.36s}.b2-motion .b2-scoreboard>div:nth-child(4){animation-delay:.44s}
+.b2-root .b2-audio-levels{display:grid;gap:12px;padding:14px 0;border-bottom:1px solid #ffffff20;margin-bottom:10px}
+.b2-audio-levels label{display:grid;gap:4px;font-size:14px}.b2-audio-levels label>span{display:flex;justify-content:space-between;gap:12px}.b2-audio-levels output{font-variant-numeric:tabular-nums;color:#d2c1cf}
+.b2-audio-levels input{display:block;width:100%;height:34px;accent-color:#ee1b46;cursor:pointer;touch-action:pan-y}.b2-audio-levels input:disabled{opacity:.4;cursor:default}.b2-audio-levels input:focus-visible{outline:2px solid #ffdc75;outline-offset:3px}
+@keyframes b2-hand-arrive{from{opacity:0;transform:translateY(14px) rotate(-3deg)}to{opacity:1;transform:translateY(0) rotate(0)}}
+@keyframes b2-deck-ready{from{opacity:0;transform:translateY(-10px) rotate(-8deg)}to{opacity:1;transform:translateY(0) rotate(-8deg)}}
+@keyframes b2-result-arrive{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes b2-winner-arrive{from{opacity:0;translate:-14px 0}to{opacity:1;translate:0 0}}
+@keyframes b2-score-arrive{from{opacity:0;transform:translateX(8px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.b2-root .b2-deal-flight{display:none}.b2-root *{animation:none!important;transition:none!important}}
+.b2-still .b2-deal-flight{display:none}
