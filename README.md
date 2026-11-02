@@ -1,114 +1,122 @@
-# vinext-starter
+# TEKAD Arcade
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+Kumpulan game TEKAD yang berjalan di [vinext](https://github.com/cloudflare/vinext) (Next.js di atas Vite) dan Cloudflare Worker, dengan database Cloudflare D1 (Drizzle). Seluruh game dilindungi login SSO Lahans.
 
-## Prerequisites
+## Game
+
+| Game | Path |
+|---|---|
+| BIG 2: Wild Cards | `/big-two` |
+| Eldric's Workshop | `/eldrics-workshop` |
+| Sejuta Poin | `/sejuta-poin` |
+| Switch Run | `/switch-run` |
+| Saving Twilight | `/tekad-jrpg` |
+| TEKAD Chronicles | `/chronicles/` |
+| TEKAD Racing | `/tekad-racing` |
+| TEKAD Jigsaw | `/jigsaw` |
+
+Daftar lengkap, cover, dan artwork ada di [app/arcade-catalog.ts](app/arcade-catalog.ts).
+
+## Prasyarat
 
 - Node.js `>=22.13.0`
-- Linux with `flock`, `curl`, and GNU `timeout`
+- Untuk `install:ci` dan `build`: Linux dengan `flock`, `curl`, dan GNU `timeout`. Skrip ini tidak berjalan native di macOS; lihat [Build di macOS](#build-di-macos).
 
-## Sites Lifecycle
+## Memulai
 
-The Sites lifecycle CLI runs the locked dependency install before returning this checkout. Edit the source under `app/`, then checkpoint when a coherent milestone is ready to inspect or share. The remote Sites builder runs `npm run build` against the pushed commit. Do not repeat install or build as a normal pre-checkpoint step.
-
-This starter does not use `wrangler.jsonc`.
-
-`install:ci` is intentionally a single, non-retrying `npm ci`. It refuses a concurrent install for the same project, consumes a matching image-seeded npm cache with `--prefer-offline` while retaining registry fallback for a missing cache object, otherwise downloads and verifies the complete vinext tarball recorded in `package-lock.json`, limits npm to one socket, and terminates a stalled install. `build` applies a short timeout and then validates the Sites artifact. These helpers target Linux and use GNU `timeout`; they are not native macOS scripts.
-
-Scripts that need writable project-scoped home, npm, XDG, and temporary paths use `scripts/sites-env.sh`. The `dev` and `start` scripts honor the caller's runtime environment and keep Wrangler logs inside the checkout. The generated `.sites-runtime/` directory is disposable and ignored by Git.
-
-## Included Shape
-
-- edit site code under `app/`
-- `app/chatgpt-auth.ts` provides optional dispatch-owned ChatGPT sign-in helpers
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/index.ts` reads the D1 binding from the Cloudflare Worker environment
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
-
-## Workspace Auth Headers
-
-OpenAI workspace sites can read the current user's email from
-`oai-authenticated-user-email`.
-
-SIWC-authenticated workspace sites may also receive
-`oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty
-`name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by
-`oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
-
-Treat the full name as optional and fall back to email when it is absent:
-
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
-}
+```sh
+npm ci
+cp .env.example .env      # lalu isi nilai SSO_* (lihat bagian Login SSO)
+npm run db:sso:local      # menyiapkan tabel sesi di D1 lokal
+npm run dev
 ```
 
-## Optional Dispatch-Owned ChatGPT Sign-In
+Restart server setelah mengubah `.env`.
 
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs
-optional or required ChatGPT sign-in:
+## Login SSO Lahans
 
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send
-  anonymous visitors through Sign in with ChatGPT.
-- Use `chatGPTSignInPath(returnTo)` and `chatGPTSignOutPath(returnTo)` for
-  browser links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in
-  or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because
-  they depend on per-request identity headers.
+Login memakai API SSO Lahans melalui Worker. Browser hanya berbicara dengan origin Arcade; app key dan token tidak pernah dikirim ke browser.
 
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the
-OAuth cookies, and identity header injection. Do not implement app routes for
-those reserved paths. Routes that do not import and call the helper remain
-anonymous-compatible.
+Konfigurasi server (di `.env` untuk lokal, environment Worker untuk production):
 
-SIWC establishes identity only; it does not prove workspace membership. Use the
-Sites hosting platform's access policy controls for workspace-wide restrictions,
-or enforce explicit server-side membership or allowlist checks.
+| Variabel | Isi |
+|---|---|
+| `SSO_API_BASE_URL` | Base URL API SSO (HTTPS, kecuali localhost) |
+| `SSO_APP_NAME` | Nama aplikasi terdaftar (`app_name` pada `/token/auth`) |
+| `SSO_APP_KEY` | App key rahasia; simpan sebagai secret di production |
+| `SSO_APP_CODE` | Nilai header `X-SSO-App-Code` pada login dan logout |
 
-Use SIWC for account pages, user-specific dashboards, saved records, and write
-actions tied to the current ChatGPT user. Leave public content anonymous.
+Jangan memakai prefix `VITE_` atau `NEXT_PUBLIC_` pada nilai ini. `.env` diabaikan Git.
 
-## Lahans SSO
+Alur login (tiga request, dua di antaranya terlihat di tab Network browser):
 
-Login Arcade now uses the external Lahans API through the Worker. Configure the server-only `SSO_API_BASE_URL`, `SSO_APP_NAME`, `SSO_APP_KEY`, and `SSO_APP_CODE` values using [the environment example](.env.example), then run `npm run db:sso:local` to prepare the local session table. See [SSO setup and deployment](docs/LAHANS_SSO.md) for production secrets, D1 migrations, session behavior, and staging acceptance work.
+```
+Browser → POST /api/auth/token  → Worker → POST /token/auth        (token aplikasi, disegel di cookie HttpOnly)
+Browser → POST /api/auth/login  → Worker → POST /sso/auth/login    (header token + X-SSO-App-Code)
+```
 
-Run `npm run test:sso` for focused authentication checks. The original frontend-only SSO design is superseded by this integration.
+- Sesi dibuat hanya jika respons `Success`, `status` bernilai `active`, dan `access.has_access` bernilai `true`. Selain itu login ditolak (403).
+- Cookie sesi `tekad_arcade_session` berisi ID acak (HttpOnly, SameSite=Lax); token disimpan di D1, tabel `arcade_auth_sessions`.
+- `GET /api/auth/session` memeriksa sesi (401 bila belum login). `POST /api/auth/logout` mencabut sesi lokal lalu memanggil `POST /sso/auth/logout`.
+- Halaman game dan API game (`/api/big-two`, `/api/quiz`, `/api/leaderboard`, `/api/live`) diperiksa sebelum diteruskan; pengguna tanpa sesi diarahkan ke `/login?returnTo=…`.
 
-## Diagnostic Commands
+Rincian perilaku, deployment production, dan keputusan implementasi ada di [docs/LAHANS_SSO.md](docs/LAHANS_SSO.md). Rancangan awal integrasi ada di [prd-sso-integration.md](prd-sso-integration.md).
 
-- `npm run install:ci`: perform the one bounded lockfile install
-- `npm run dev`: start the Vite/Vinext development server
-- `npm run build`: build and validate the deployable Sites artifact
-- `npm run start`: start the built Vinext application
-- `npm test`: build, validate, and verify the rendered development-preview metadata
-- `npm run validate:artifact`: recheck an existing artifact's manifest and ESM `default.fetch` export
-- `npm run db:generate`: generate Drizzle migrations after schema changes
+## Struktur proyek
 
-Use build and validation commands for targeted diagnosis after a remote failure, not as part of the normal checkpoint path.
+- `app/` — halaman, komponen, dan game (satu folder per game); `app/login/` untuk halaman login, `app/auth-provider.tsx` untuk status sesi di browser
+- `worker/index.ts` — entry Cloudflare Worker; memanggil `handleSso` sebelum request diteruskan ke aplikasi
+- `lib/sso/` — klien API Lahans (`client.ts`), handler endpoint dan sesi (`server.ts`), pembersihan storage browser
+- `lib/sso-route-guard.ts` — penentuan path yang dilindungi
+- `db/` dan `drizzle/` — skema dan migrasi D1 (`0009` menambah tabel sesi)
+- `public/` — aset statis, termasuk `chronicles/` (game mandiri yang juga dilindungi Worker)
+- `tests/` — tes Node (`node --test`)
+- `docs/` — dokumentasi tambahan
 
-The timeout defaults can be overridden for a controlled canary with `SITES_INSTALL_TIMEOUT`, `SITES_INSTALL_KILL_AFTER`, `SITES_BUILD_TIMEOUT`, and `SITES_BUILD_KILL_AFTER`. A timeout fails the command; the helpers never retry an unchanged install or build.
+## Perintah
 
-## Learn More
+| Perintah | Fungsi |
+|---|---|
+| `npm run dev` | Server pengembangan Vite/vinext |
+| `npm run build` | Build dan validasi artifact (Linux, GNU `timeout`) |
+| `npm run start` | Menjalankan hasil build |
+| `npm test` | Build, validasi, dan tes HTML terender |
+| `npm run test:sso` | Tes autentikasi SSO (kontrak upstream, sesi, guard, UI, runtime Worker) |
+| `npm run test:quiz` | Tes kuis |
+| `npm run lint` | ESLint |
+| `npm run db:generate` | Membuat migrasi Drizzle setelah skema berubah |
+| `npm run db:sso:local` | Menerapkan migrasi tabel sesi ke D1 lokal (aman diulang) |
+| `npm run validate:artifact` | Memeriksa ulang manifest dan ekspor `default.fetch` pada artifact |
 
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+Periksa tipe dengan `npx tsc --noEmit --incremental false`.
+
+### Build di macOS
+
+Skrip `build` dan `install:ci` menargetkan Linux. Di macOS tanpa GNU `timeout`:
+
+```sh
+node node_modules/vinext/dist/cli.js build
+npm run validate:artifact
+node --test tests/rendered-html.test.mjs
+```
+
+## Deployment
+
+- Isi keempat nilai `SSO_*` di environment Worker production, dengan `SSO_APP_KEY` sebagai secret.
+- Terapkan migrasi `drizzle/0009_arcade_auth_sessions.sql` ke database D1 yang diikat sebagai `DB`.
+- Aset harus melewati Worker (`assets.run_worker_first: true`, binding `ASSETS`) supaya halaman statis seperti Chronicles ikut diperiksa. Konfigurasi build sudah mengaturnya.
+- Proyek ini tidak memakai `wrangler.jsonc`; binding dideklarasikan di `.openai/hosting.json` dan disimulasikan oleh `vite.config.ts` saat pengembangan.
+
+Skrip `install:ci` adalah satu kali `npm ci` tanpa retry, dan `build` memakai timeout lalu memvalidasi artifact. Batas waktu dapat diubah lewat `SITES_INSTALL_TIMEOUT`, `SITES_INSTALL_KILL_AFTER`, `SITES_BUILD_TIMEOUT`, dan `SITES_BUILD_KILL_AFTER`. Direktori `.sites-runtime/` dibuat otomatis dan diabaikan Git.
+
+## Catatan
+
+- Penyimpanan skor, room, dan progres game masih mengikuti mekanisme perangkat yang sudah ada; belum dikaitkan ke GUID Lahans.
+- Sesi yang sedang berjalan hanya memperbarui token (refresh). API SSO yang dipakai tidak menyediakan endpoint profil, jadi akun yang dinonaktifkan setelah login baru terdeteksi saat refresh token ditolak.
+- Helper `app/chatgpt-auth.ts` (Sign in with ChatGPT) bawaan template masih ada, tetapi tidak dipakai oleh login Arcade, yang memakai SSO Lahans.
+- Per pemeriksaan 26 Oktober 2026, lint seluruh proyek melaporkan error pada kode game/test yang ada sebelum integrasi SSO, dan tes `renders development preview metadata` belum lulus. Keduanya terpisah dari autentikasi (lihat [docs/LAHANS_SSO.md](docs/LAHANS_SSO.md)).
+
+## Referensi
+
+- [vinext](https://github.com/cloudflare/vinext)
+- [Drizzle D1](https://orm.drizzle.team/docs/get-started/d1-new)
